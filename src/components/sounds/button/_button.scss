@@ -1,0 +1,70 @@
+//Variables
+$background: #f9fafb;
+$light: #e7e7e7;
+$color: #a2facf;
+$dark: #010720;
+
+//Mixins
+@mixin afterEffect_defaultStyles($hw) {    
+    position: absolute;
+
+    height: $hw;
+    width: $hw;
+    
+    background: $color;
+    border-radius: 12px;
+
+    transform: translate(-.5rem, .5rem);
+}
+
+
+//Actual Styles
+
+.button--container {
+    color: $dark;
+    background: $light;
+    border-radius: 12px;
+
+    cursor: pointer;
+    pointer-events: all;
+
+    transition: .4s;
+}
+
+.button--container:hover {
+    background: $dark;
+    color: $background;
+
+    transform: translate(.5rem, -.5rem);
+}
+
+.button--container--before {
+    height: 9.75rem;
+    width: 9.75rem;
+}
+
+.button--container--before:hover::before {
+    @include afterEffect_defaultStyles($hw: 9.75rem);
+    
+    content: "";
+    z-index: -1;
+}
+
+
+//Extra classes
+
+    //Onscroll
+    .button--container--after {
+        height: 11.75rem;
+        width: 11.75rem;
+    }
+
+    .button--container--after:hover::after {
+        @include afterEffect_defaultStyles($hw: 11.75rem);
+
+        content: "";
+        z-index: -38;
+        transition: .4s;
+    }
+
+    //After clicking the element
