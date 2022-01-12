@@ -24,6 +24,10 @@
   font-size: 4rem;
   margin-bottom: 0.2rem;
 }
+.header h1 img {
+  height: 4rem;
+  margin-right: -1rem;
+}
 .header h3 {
   font-size: 1.5rem;
   font-weight: 400;
@@ -47,25 +51,27 @@
   position: absolute;
 }
 .music-icon hr {
-  height: 1.4rem;
+  height: 1.3rem;
   width: 0.3rem;
   position: absolute;
-  background: #f9fafb;
+  background: #a2facf;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 .music-icon .music-icon--first {
-  top: -7.4vh;
-  right: -4.9vw;
+  top: -3.6rem;
+  right: -4.45rem;
 }
 .music-icon .music-icon--second {
-  top: -9.1vh;
-  right: -5.5vw;
+  top: -4.367rem;
+  right: -5.08rem;
+  height: 1.45rem;
+  width: 0.5rem;
   transform: rotate(70deg);
 }
 .music-icon .music-icon--third {
-  top: -8.31vh;
-  right: -6.1vw;
+  top: -3.998rem;
+  right: -5.55rem;
 }
 
 .follow {
@@ -125,11 +131,6 @@
   transition: 0.4s;
 }
 
-@media screen and (max-width: 925px) {
-  .music-icon {
-    display: none;
-  }
-}
 @media screen and (max-width: 650px) {
   .follow {
     display: none;
@@ -196,13 +197,24 @@
   font-size: 4rem;
 }
 
-/*@media (max-width: 600px) {
-    .button--ground {
-        .button--container {
-            margin-bottom: 1rem;
-        }
-    }
-}*/
+@media screen and (max-width: 650px) {
+  .button--group .button--hover {
+    height: 9.75rem;
+    width: 9.75rem;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background: #010720;
+    border-radius: 15px;
+    pointer-events: none;
+    user-select: none;
+    z-index: -1;
+  }
+  .button--group .button--container--after {
+    height: 11.75rem;
+    width: 11.75rem;
+  }
+}
 .sounds--body {
   position: relative;
   height: 150vh;

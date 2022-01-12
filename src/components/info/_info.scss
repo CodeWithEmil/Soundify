@@ -20,6 +20,11 @@ $background: #010720;
     h1 {
         font-size: 4rem;
         margin-bottom: .2rem;
+
+        img {
+            height: 4rem;
+            margin-right: -1rem;
+        }
     }
     
     h3 {
@@ -51,32 +56,35 @@ $background: #010720;
     position: absolute;
 
     hr {
-        height: 1.4rem;
+        height: 1.3rem;
         width: .3rem;
 
         position: absolute;
 
-        background: $color;
+        background: $mainColor;
 
         border: none;
-        border-radius: 5px;
+        border-radius: 4px;
     }
 
     .music-icon--first {
-        top: -7.4vh;
-        right: -4.9vw;
+        top: -3.6rem; //-7.4vh
+        right: -4.45rem; //-4.9vw
     }
 
     .music-icon--second {
-        top: -9.1vh;
-        right: -5.5vw;
+        top: -4.367rem; //-9.1vh
+        right: -5.08rem; //-5.5vw
+
+        height: 1.45rem;
+        width: .5rem;
 
         transform: rotate(70deg);
     }
 
     .music-icon--third {
-        top: -8.31vh;
-        right: -6.1vw;
+        top: -3.998rem; //-8.31vh
+        right: -5.55rem; //-6.1vw
     }
 }
 
@@ -150,13 +158,6 @@ $background: #010720;
 
 
 //Responsiveness
-
-@media screen and (max-width: 925px) {
-    .music-icon {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 650px) {
     .follow {
         display: none;
