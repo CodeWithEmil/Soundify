@@ -147,3 +147,18 @@ $background: #010720;
 
         transition: .4s;
     }
+
+
+//Responsiveness
+
+@media screen and (max-width: 925px) {
+    .music-icon {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .follow {
+        display: none;
+    }
+}

@@ -125,58 +125,87 @@
   transition: 0.4s;
 }
 
-.button--container {
-  color: #010720;
+@media screen and (max-width: 925px) {
+  .music-icon {
+    display: none;
+  }
+}
+@media screen and (max-width: 650px) {
+  .follow {
+    display: none;
+  }
+}
+.button--group {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.button--group .button--hover {
+  height: 9.75rem;
+  width: 9.75rem;
+  position: absolute;
+  background: #010720;
+  border-radius: 15px;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+  transition: 0.4s;
+}
+.button--group .button--container {
+  height: 9.75rem;
+  width: 9.75rem;
+  color: #24292f;
   background: #e7e7e7;
   border-radius: 12px;
   cursor: pointer;
   pointer-events: all;
   transition: 0.4s;
 }
-
-.button--container:hover {
-  background: #010720;
-  color: #f9fafb;
-  transform: translate(0.5rem, -0.5rem);
+.button--group .button--container .button--name {
+  height: 22%;
+  display: grid;
+  align-content: end;
 }
-
-.button--container--before {
-  height: 9.75rem;
-  width: 9.75rem;
+.button--group .button--container .button--name h3 {
+  font-weight: 400;
+  margin-left: 1rem;
 }
-
-.button--container--before:hover::before {
-  position: absolute;
-  height: 9.75rem;
-  width: 9.75rem;
-  background: #a2facf;
-  border-radius: 12px;
-  transform: translate(-0.5rem, 0.5rem);
-  content: "";
-  z-index: -1;
+.button--group .button--container .button--icon {
+  height: 76%;
+  display: grid;
+  place-items: center;
 }
-
-.button--container--after {
-  height: 11.75rem;
-  width: 11.75rem;
-}
-
-.button--container--after:hover::after {
-  position: absolute;
-  height: 11.75rem;
-  width: 11.75rem;
-  background: #a2facf;
-  border-radius: 12px;
-  transform: translate(-0.5rem, 0.5rem);
-  content: "";
-  z-index: -38;
+.button--group .button--container .button--icon i {
+  font-size: 3rem;
   transition: 0.4s;
 }
+.button--group .button--container:hover {
+  background: #a2facf;
+  color: #010720;
+  transform: translate(0.5rem, -0.5rem);
+}
+.button--group .button--container:active {
+  transform: translate(0rem, 0rem);
+}
+.button--group .button--container--after {
+  height: 11.75rem;
+  width: 11.75rem;
+}
+.button--group .button--container--after .button--icon i {
+  font-size: 4rem;
+}
 
+/*@media (max-width: 600px) {
+    .button--ground {
+        .button--container {
+            margin-bottom: 1rem;
+        }
+    }
+}*/
 .sounds--body {
-  position: absolute;
-  bottom: -80vh;
-  height: 157vh;
+  position: relative;
+  height: 150vh;
   width: 60%;
   border-radius: 1.5rem 1.5rem 0 0;
   background: #f9fafb;
@@ -185,21 +214,22 @@
   z-index: 0;
 }
 .sounds--body .sounds--search {
-  border: solid orange;
-  height: 10%;
+  height: 11%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
 }
 .sounds--body .sounds--search .filters {
-  border: solid plum;
-  height: 100%;
   width: 60%;
+  margin-left: 1.6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  /*.filters--one, .filters--two, .filters--three {
+      border: solid red;
+  }*/
   /*button::after {
       content: "";
 
@@ -224,19 +254,30 @@
   border: none;
   transition: ease 0.4s;
 }
+.sounds--body .sounds--search .filters button span {
+  font-size: 0.9rem;
+}
 .sounds--body .sounds--search .filters button:hover {
   background: #010720;
   color: #f9fafb;
-  transform: translate(0.5rem, -0.5rem);
+  transform: translate(0.5rem, -0.5em);
 }
 .sounds--body .sounds--search .filters button:active {
   background: #a2facf;
   color: #010720;
   transform: translate(0.2rem, -0.2rem);
 }
+.sounds--body .sounds--search .filters .filters--one span::before {
+  content: "Relax ";
+}
+.sounds--body .sounds--search .filters .filters--two span::before {
+  content: "Productivity ";
+}
+.sounds--body .sounds--search .filters .filters--three span::before {
+  content: "Greatness ";
+}
 .sounds--body .sounds--search .random {
   width: 20%;
-  border: solid blueviolet;
   display: grid;
   place-items: center;
 }
@@ -264,35 +305,85 @@
   transform: translate(0.2rem, -0.2rem);
 }
 .sounds--body .sounds--container {
-  border: solid lime;
-  height: 87%;
+  height: 85%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 .sounds--body .sounds--container .sounds--row {
-  border: solid red;
   display: grid;
   grid-template-rows: repeat(4, 1fr);
 }
 .sounds--body .sounds--container .sounds--row .sounds--icon--container {
-  border: solid navy;
   display: grid;
   place-items: center;
-}
-@media screen and (max-width: 500px) {
-  .sounds--body .sounds--container .sounds--container {
-    grid-template-columns: 1fr;
-    align-content: center;
-  }
 }
 
 .juju {
   width: 85%;
 }
-.juju .button-container {
-  width: 15rem;
-}
 
+@media screen and (max-width: 1180px) {
+  .sounds--body {
+    width: 80%;
+  }
+
+  .juju {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 925px) {
+  .sounds--body {
+    height: fit-content;
+  }
+  .sounds--body .sounds--search {
+    margin-top: 1.5rem;
+  }
+  .sounds--body .sounds--search .filters button {
+    height: 80%;
+    width: 30%;
+  }
+  .sounds--body .sounds--search .filters .filters--one span, .sounds--body .sounds--search .filters .filters--two span, .sounds--body .sounds--search .filters .filters--three span {
+    font-size: 1.5rem;
+  }
+  .sounds--body .sounds--search .filters .filters--one span::before, .sounds--body .sounds--search .filters .filters--two span::before, .sounds--body .sounds--search .filters .filters--three span::before {
+    content: "";
+  }
+  .sounds--body .sounds--container {
+    padding-top: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sounds--body .sounds--container .sounds--row .sounds--icon--container {
+    margin-bottom: 2.5rem;
+  }
+}
+@media screen and (max-width: 800px) {
+  .sounds--body {
+    width: 90%;
+  }
+
+  .juju {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .juju {
+    width: 100%;
+  }
+
+  .sounds--body {
+    height: fit-content;
+    min-height: 300vh;
+    width: 100%;
+  }
+  .sounds--body .sounds--search {
+    height: 20%;
+  }
+  .sounds--body .sounds--container {
+    height: 70%;
+    grid-template-columns: 1fr;
+    align-content: bottom;
+  }
+}
 * {
   margin: 0;
   padding: 0;

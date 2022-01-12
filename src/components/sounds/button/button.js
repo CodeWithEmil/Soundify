@@ -14,6 +14,7 @@ class Button extends Component {
 
         //References
         this.buttonContainer = React.createRef();
+        this.buttonHover = React.createRef();
 
         //Executing a Method
         window.addEventListener('scroll', this.styling);
@@ -23,21 +24,27 @@ class Button extends Component {
         e.preventDefault();
 
         if (this.container.current.scrollTop === 0) {
-            this.buttonContainer.current.classList.remove("button--container--before")
             this.buttonContainer.current.classList.add("button--container--after");
+            this.buttonHover.current.classList.add("button--container--after");
         }
 
     }
 
     render() {
         return(
-            <div className = "button--container button--container--before" ref = { this.buttonContainer }>
-                <div className = "button--name">
-                    <h3>{ this.props.name }</h3>
+            <div className = "button--group">
+
+                <div className = "button--hover" ref = { this.buttonHover } ></div>
+                
+                <div className = "button--container" ref = { this.buttonContainer }>
+                    <div className = "button--name">
+                        <h3>{ this.props.name }</h3>
+                    </div>
+                    <div className = "button--icon">
+                        <i className = {this.props.icon}></i>
+                    </div>
                 </div>
-                <div className = "button--icon">
-                    <i className = {this.props.icon}></i>
-                </div>
+
             </div>
         )
     }

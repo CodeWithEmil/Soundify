@@ -3,6 +3,7 @@ $background: #f9fafb;
 $light: #e7e7e7;
 $color: #a2facf;
 $dark: #010720;
+$gray: #24292f;
 
 //Mixins
 @mixin afterEffect_defaultStyles($hw) {    
@@ -20,51 +21,99 @@ $dark: #010720;
 
 //Actual Styles
 
-.button--container {
-    color: $dark;
-    background: $light;
-    border-radius: 12px;
+.button--group {
+    //border: solid orange;
+    height: 100%;
+    width: 100%;
 
-    cursor: pointer;
-    pointer-events: all;
+    display: grid;
+    place-items: center;
 
-    transition: .4s;
-}
+    .button--hover {
+        height: 9.75rem;
+        width: 9.75rem;
 
-.button--container:hover {
-    background: $dark;
-    color: $background;
+        position: absolute;
 
-    transform: translate(.5rem, -.5rem);
-}
+        background: $dark;
+        border-radius: 15px;
+        
+        pointer-events: none;
+        user-select: none;
+        z-index: -1;
 
-.button--container--before {
-    height: 9.75rem;
-    width: 9.75rem;
-}
-
-.button--container--before:hover::before {
-    @include afterEffect_defaultStyles($hw: 9.75rem);
-    
-    content: "";
-    z-index: -1;
-}
-
-
-//Extra classes
-
-    //Onscroll
-    .button--container--after {
-        height: 11.75rem;
-        width: 11.75rem;
-    }
-
-    .button--container--after:hover::after {
-        @include afterEffect_defaultStyles($hw: 11.75rem);
-
-        content: "";
-        z-index: -38;
         transition: .4s;
     }
 
-    //After clicking the element
+    .button--container {
+        height: 9.75rem;
+        width: 9.75rem;
+    
+        color: $gray;
+        background: $light;
+        border-radius: 12px;
+    
+        cursor: pointer;
+        pointer-events: all;
+    
+        transition: .4s;
+    
+        .button--name {
+            height: 22%;
+
+            display: grid;
+            align-content: end;
+
+            h3 {
+                font-weight: 400;
+                margin-left: 1rem;
+            }
+        }
+    
+        .button--icon {
+            height: 76%;
+
+            display: grid;
+            place-items: center;
+
+            i {
+                font-size: 3rem;
+                transition: .4s;
+            }
+        }
+    }
+
+    //Extra Classes
+        //Hover
+        .button--container:hover {
+            background: $color;
+            color: $dark;
+        
+            transform: translate(.5rem, -.5rem);
+        }
+        
+        //Active
+        .button--container:active {
+            transform: translate(0rem, 0rem);
+        }
+
+        //Onscroll
+        .button--container--after {
+            height: 11.75rem;
+            width: 11.75rem;
+
+            .button--icon {
+                i {
+                    font-size: 4rem;
+                }
+            }
+        }
+}
+
+/*@media (max-width: 600px) {
+    .button--ground {
+        .button--container {
+            margin-bottom: 1rem;
+        }
+    }
+}*/

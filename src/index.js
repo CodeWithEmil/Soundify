@@ -6,6 +6,9 @@ import Body from "./components/body/body";
 
 import reportWebVitals from './reportWebVitals';
 
+console.log(window.innerWidth + " is inner width");
+console.log(window.outerWidth + " is outer width");
+
 ReactDOM.render(
   <React.StrictMode>
     <Body />

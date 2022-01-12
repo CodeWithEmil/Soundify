@@ -9,6 +9,9 @@
 /coverage
 /src/components/info/useScript.js
 
+# extra
+/src/images
+
 # production
 /build
 

@@ -8,10 +8,9 @@ $color: #a2facf;
 $dark: #010720;
 
 .sounds--body {
-    position: absolute;
+    position: relative;
 
-    bottom: -80vh;
-    height: 157vh;
+    height: 150vh;
     width: 60%;
 
     border-radius: 1.5rem 1.5rem 0 0;
@@ -24,8 +23,8 @@ $dark: #010720;
     z-index: 0;
 
     .sounds--search {
-        border: solid orange;
-        height: 10%;
+        //border: solid orange;
+        height: 11%;
 
         display: flex;
         flex-direction: row;
@@ -33,9 +32,10 @@ $dark: #010720;
         align-items: stretch;
 
         .filters {
-            border: solid plum;
-            height: 100%;
+            //border: solid plum;
             width: 60%;
+
+            margin-left: 1.6rem;
 
             display: flex;
             flex-direction: row;
@@ -54,13 +54,17 @@ $dark: #010720;
                 border: none;
 
                 transition: ease .4s;
+
+                span {
+                    font-size: .9rem;
+                }
             }
 
             button:hover {
                 background: $dark;
                 color: $background;
 
-                transform: translate(.5rem, -.5rem);
+                transform: translate(.5rem, -.5em);
             }
 
             button:active {
@@ -68,6 +72,28 @@ $dark: #010720;
                 color: $dark;
 
                 transform: translate(.2rem, -.2rem);
+            }
+
+            /*.filters--one, .filters--two, .filters--three {
+                border: solid red;
+            }*/
+
+            .filters--one {
+                span::before {
+                    content: "Relax ";
+                }
+            }
+
+            .filters--two {
+                span::before {
+                    content: "Productivity ";
+                }
+            }
+
+            .filters--three {
+                span::before {
+                    content: "Greatness ";
+                }
             }
 
             /*button::after {
@@ -87,7 +113,7 @@ $dark: #010720;
 
         .random {
             width: 20%;
-            border: solid blueviolet;
+            //border: solid blueviolet;
 
             display: grid;
             place-items: center;
@@ -127,39 +153,116 @@ $dark: #010720;
     }
 
     .sounds--container {
-        border: solid lime;
-        height: 87%;
+        //border: solid lime;
+        height: 85%;
 
         display: grid;
         grid-template-columns: repeat(4, 1fr);
 
         .sounds--row {
-            border: solid red;
+            //border: solid red;
     
             display: grid;
             grid-template-rows: repeat(4, 1fr);
     
             .sounds--icon--container {
-                border: solid navy;
+                //border: solid navy;
 
                 display: grid;
                 place-items: center;
             }
         }
+    }
+}
 
-        @media screen and (max-width: 500px) {     
-            .sounds--container {
-                grid-template-columns: 1fr;
-                align-content: center;
+
+.juju {
+    width: 85%;
+}
+
+
+
+//Responsiveness
+
+
+@media screen and (max-width: 1180px) {
+    .sounds--body {
+        width: 80%;
+    }
+
+    .juju {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 925px) {
+    .sounds--body {
+        height: fit-content;
+
+        .sounds--search {
+            margin-top: 1.5rem;
+            .filters {
+                button {
+                    height: 80%;
+                    width: 30%;
+                }
+
+                .filters--one, .filters--two, .filters--three {
+                    span {
+                        font-size: 1.5rem;
+                    }
+
+                    span::before {
+                        content: "";
+                    }
+                }
+            }
+
+        }
+
+        .sounds--container {
+            padding-top: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+
+            .sounds--row {
+                .sounds--icon--container {
+                    margin-bottom: 2.5rem;
+                }
             }
         }
     }
 }
 
-    .juju {
-        width: 85%;
+@media screen and (max-width: 800px) {
+    .sounds--body {
+        width: 90%;
+    }
 
-        .button-container {
-            width: 15rem;
+    .juju {
+        width: 90%;
+    }
+}
+
+
+@media screen and (max-width: 650px) {     
+    .juju {
+        width: 100%;
+    }
+
+    .sounds--body {
+        height: fit-content;
+        min-height: 300vh;
+        width: 100%;
+
+        .sounds--search {
+            height: 20%;
+        }
+
+        .sounds--container {
+            height: 70%;
+            grid-template-columns: 1fr;
+            align-content:bottom;
         }
     }
+}
