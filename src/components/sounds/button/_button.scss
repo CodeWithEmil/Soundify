@@ -20,7 +20,6 @@ $gray: #24292f;
 
 
 //Actual Styles
-
 .button--group {
     //border: solid orange;
     height: 100%;
@@ -85,7 +84,7 @@ $gray: #24292f;
 
     //Extra Classes
         //Hover
-        .button--container:hover {
+        .button--container:hover, .button--container--clicked {
             background: $color;
             color: $dark;
         
@@ -108,8 +107,38 @@ $gray: #24292f;
                 }
             }
         }
+
+
+        //If the sounds are playing
+        .button--container--clicked {
+            i {
+                animation: 3s icon infinite;
+            }
+        }
+
+        @keyframes icon {
+            0% {
+                transform: rotate(10deg);
+            }
+            15% {
+                transform: rotate(-8deg);
+            }
+            30%, 100% {
+                transform: rotate(0deg);
+            }
+            /*20% {
+                transform: rotate(8deg);
+            }
+            30% {
+                transform: rotate(0deg);
+            }
+            40% {
+                transform: rotate(-8deg);
+            }*/
+        }
 }
 
+//Responsiveness
 @media screen and (max-width: 650px) {
     .button--group {
         .button--hover {
@@ -134,4 +163,11 @@ $gray: #24292f;
             width: 11.75rem;
         }
     }
+}
+
+
+//Toast
+.lighterShadow {
+    box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+    box-shadow: rgba(17, 12, 46, 0.041) 0 48px 100px 0;
 }

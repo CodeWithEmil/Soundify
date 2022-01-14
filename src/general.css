@@ -181,7 +181,7 @@
   font-size: 3rem;
   transition: 0.4s;
 }
-.button--group .button--container:hover {
+.button--group .button--container:hover, .button--group .button--container--clicked {
   background: #a2facf;
   color: #010720;
   transform: translate(0.5rem, -0.5rem);
@@ -195,6 +195,29 @@
 }
 .button--group .button--container--after .button--icon i {
   font-size: 4rem;
+}
+.button--group .button--container--clicked i {
+  animation: 3s icon infinite;
+}
+@keyframes icon {
+  0% {
+    transform: rotate(10deg);
+  }
+  15% {
+    transform: rotate(-8deg);
+  }
+  30%, 100% {
+    transform: rotate(0deg);
+  }
+  /*20% {
+      transform: rotate(8deg);
+  }
+  30% {
+      transform: rotate(0deg);
+  }
+  40% {
+      transform: rotate(-8deg);
+  }*/
 }
 
 @media screen and (max-width: 650px) {
@@ -215,6 +238,11 @@
     width: 11.75rem;
   }
 }
+.lighterShadow {
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  box-shadow: rgba(17, 12, 46, 0.041) 0 48px 100px 0;
+}
+
 .sounds--body {
   position: relative;
   height: 150vh;
