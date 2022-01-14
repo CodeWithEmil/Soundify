@@ -9,6 +9,8 @@ class Sounds extends Component {
         //Creating References
         this.container = React.createRef();
         this.body = this.props.body;
+            //References for Sounds
+            this.rain = React.createRef(null);
         
         window.addEventListener('scroll', this.styling);
     }
@@ -43,7 +45,8 @@ class Sounds extends Component {
 
                     <div className = "sounds--row">
                         <div className = "sounds--icon--container">
-                            <Button name = "Rain" icon = "fas fa-cloud-rain" container = {this.container} audio = { require("./audio/rain.mp3") } />
+                            <Button name = "Rain" icon = "fas fa-cloud-rain" container = {this.container} audio = { require("./audio/rain.mp3") } ref = { this.rain } />
+                            <button onClick = { this.rain }>joe biden</button>
                         </div>
 
                         <div className = "sounds--icon--container">
@@ -69,7 +72,7 @@ class Sounds extends Component {
                         </div>
 
                         <div className = "sounds--icon--container">
-                            <Button name = "Café" icon = "fas fa-coffee" container = {this.container} audio = { require("./audio/cafe.mp3") }/>
+                            <Button name = "Café" icon = "fas fa-mug-hot" container = {this.container} audio = { require("./audio/cafe.mp3") }/>
                         </div>
 
                         <div className = "sounds--icon--container">

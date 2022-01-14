@@ -152,6 +152,7 @@ class Button extends Component {
         })
         
         //Displaying a Toast (notification)
+        toast.remove();
         return this.notif();
     }
 
