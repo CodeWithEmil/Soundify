@@ -329,7 +329,7 @@
   border-radius: 50px;
   pointer-events: all;
   cursor: pointer;
-  transition: 0.4s;
+  transition: ease 0.4s;
 }
 .sounds--body .sounds--search .random button i {
   font-size: 1rem;
