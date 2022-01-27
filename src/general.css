@@ -150,8 +150,25 @@
   border-radius: 15px;
   pointer-events: none;
   user-select: none;
-  z-index: -1;
+  z-index: -2;
   transition: 0.4s;
+}
+.button--group .button--volume {
+  transform: rotate(270deg) translateY(0%);
+  background: #f9fafb;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  padding: 15px;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 0;
+  transition: ease-in 0.4s;
+}
+.button--group .button--volume input {
+  border: solid navy;
+  z-index: 0;
+}
+.button--group .button--volume--show {
+  transform: rotate(270deg) translateY(220%);
 }
 .button--group .button--container {
   height: 9.75rem;
@@ -162,6 +179,7 @@
   cursor: pointer;
   pointer-events: all;
   transition: 0.4s;
+  z-index: 1;
 }
 .button--group .button--container .button--name {
   height: 22%;
@@ -232,6 +250,14 @@
     pointer-events: none;
     user-select: none;
     z-index: -1;
+  }
+  .button--group .button--volume {
+    position: absolute;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%) rotate(270deg);
+  }
+  .button--group .button--volume--show {
+    transform: translateY(95%) translateX(20%) rotate(270deg);
   }
   .button--group .button--container--after {
     height: 11.75rem;

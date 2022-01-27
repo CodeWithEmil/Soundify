@@ -46,7 +46,6 @@ class Sounds extends Component {
                     <div className = "sounds--row">
                         <div className = "sounds--icon--container">
                             <Button name = "Rain" icon = "fas fa-cloud-rain" container = {this.container} audio = { require("./audio/rain.mp3") } ref = { this.rain } />
-                            <button onClick = { this.rain }>joe biden</button>
                         </div>
 
                         <div className = "sounds--icon--container">

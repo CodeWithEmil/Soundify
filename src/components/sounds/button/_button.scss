@@ -39,9 +39,32 @@ $gray: #24292f;
         
         pointer-events: none;
         user-select: none;
-        z-index: -1;
+        z-index: -2;
 
         transition: .4s;
+    }
+
+    .button--volume {
+        transform: rotate(270deg) translateY(0%);
+
+        background: $background;
+        box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+        padding: 15px;
+        border-radius: 12px;
+    
+        position: absolute;
+        z-index: 0;
+
+        transition: ease-in .4s;
+
+        input {
+            border: solid navy;
+            z-index: 0;
+        }
+    }
+
+    .button--volume--show {
+        transform: rotate(270deg) translateY(220%);
     }
 
     .button--container {
@@ -56,6 +79,8 @@ $gray: #24292f;
         pointer-events: all;
     
         transition: .4s;
+
+        z-index: 1;
     
         .button--name {
             height: 22%;
@@ -156,6 +181,16 @@ $gray: #24292f;
             pointer-events: none;
             user-select: none;
             z-index: -1;
+        }
+
+        .button--volume {
+            position: absolute;
+            left: 50%;
+            transform:  translateY(100%) translateX(-50%) rotate(270deg);
+        }
+
+        .button--volume--show {
+            transform: translateY(95%) translateX(20%) rotate(270deg);
         }
 
         .button--container--after {

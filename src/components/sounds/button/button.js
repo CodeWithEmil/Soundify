@@ -19,10 +19,12 @@ class Button extends Component {
         this.audioElement = React.createRef();
         this.buttonHover = React.createRef();
         this.buttonContainer = React.createRef();
+        this.volumeChanger = React.createRef();
 
         //State
         this.state = {
-            playing: true
+            playing: true,
+            volume: 0.5
         }
 
         //Executing methods
@@ -74,11 +76,13 @@ class Button extends Component {
         //Displaying wether if it is playing or not
         console.log("Playing audio? " + this.state.playing);
         this.buttonContainer.current.classList.toggle("button--container--clicked");
+        this.volumeChanger.current.classList.toggle("button--volume--show");
 
         //Playing/pausing the audio
         if (this.audio === null || this.audio === "" || this.audio === undefined) {
             //window.alert("Error 001: Source not found.");
             this.buttonContainer.current.classList.remove("button--container--clicked");
+            this.volumeChanger.current.classList.remove("button--volume--show");
 
             this.notif = () => toast.error(`Not found: '${this.name}'`, {
             //Custom icon
@@ -114,6 +118,7 @@ class Button extends Component {
             });
         } else if (!this.state.playing) {
             this.audioElement.current.pause();
+            //this.audioElement.current.volume = "50%";
 
             this.notif = () => toast.error(`Paused '${this.name}'`, {
                 //Custom icon
@@ -156,14 +161,32 @@ class Button extends Component {
         return this.notif();
     }
 
+    volume = e => {
+        e.preventDefault();
+        const userValue = e.target.value / 100;
+        console.log(userValue)
+
+        this.setState({
+            volume: userValue
+        })
+
+        this.audioElement.current.volume = this.state.volume;
+
+        return userValue;
+    }
+
     render() {
         return(
-            <div className = "button--group" ref = { this.buttonGroup } onClick = { this.playPause }>
+            <div className = "button--group" ref = { this.buttonGroup }>
                 <audio ref = { this.audioElement } src = { this.audio } type="audio/mpeg" loop />
 
                 <div className = "button--hover" ref = { this.buttonHover } ></div>
 
-                <div className = "button--container" ref = { this.buttonContainer }>
+                <div className = "button--volume" ref = { this.volumeChanger }>
+                    <input type = "range" onInput = { this.volume } />
+                </div>
+
+                <div className = "button--container" ref = { this.buttonContainer } onClick = { this.playPause }>
                     <div className = "button--name">
                         <h3>{ this.props.name }</h3>
                     </div>
