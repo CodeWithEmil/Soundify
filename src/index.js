@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import "./general.css";
-import Body from "./components/body/body";
-
 import reportWebVitals from './reportWebVitals';
 
 console.log(window.innerWidth + " is inner width");
@@ -11,7 +8,6 @@ console.log(window.outerWidth + " is outer width");
 
 ReactDOM.render(
   <React.StrictMode>
-    <Body />
   </React.StrictMode>,
   document.getElementById('root')
 );
