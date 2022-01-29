@@ -67,6 +67,29 @@ $gray: #24292f;
         transform: rotate(270deg) translateY(220%);
     }
 
+    .button--volume--before {
+        transform: scale(.1) rotate(270deg);
+
+        background: $background;
+        box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+        padding: 10px;
+        border-radius: 12px;
+    
+        position: absolute;
+        z-index: 0;
+
+        transition: ease-in .4s;
+
+        input {
+            transform: scale(.8);
+        }
+    }
+
+    .button--volume--before--show {
+        transform: rotate(270deg) translateY(270%);
+    }
+
+
     .button--container {
         height: 9.75rem;
         width: 9.75rem;

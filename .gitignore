@@ -13,6 +13,8 @@
 /src/images
 /src/components/sounds/audio
 
+/src3
+
 # production
 /build
 
