@@ -24,7 +24,12 @@ class Button extends Component {
         //State
         this.state = {
             playing: true,
-            volume: 0.5
+            volume: 0.5,
+            
+            //State regarding element's size
+            smallEl: true,
+            smallElToggle: false,
+            smallElCounter: false
         }
 
         //Executing methods
@@ -38,6 +43,24 @@ class Button extends Component {
         if (this.container.current.scrollTop === 0) {
             this.buttonContainer.current.classList.add("button--container--after");
             this.buttonHover.current.classList.add("button--container--after");
+            this.volumeChanger.current.classList.remove("button--volume--before");
+            this.volumeChanger.current.classList.remove("button--volume--before--show");
+            this.volumeChanger.current.classList.add("button--volume");
+
+            //Styles for the input element if the button was pressed (input shown) while changing from position
+            if(this.state.smallElToggle && !this.state.smallElCounter) {
+                //this.volumeChanger.current.classList.add("button--volume--before--show");
+                this.volumeChanger.current.classList.remove("button--volume--before--show");
+                this.volumeChanger.current.classList.add("button--volume--show");
+                
+                this.setState({
+                    smallElCounter: true
+                })
+            }
+
+            this.setState({
+                smallEl: false
+            })
         }
     }
 
@@ -76,7 +99,16 @@ class Button extends Component {
         //Displaying wether if it is playing or not
         console.log("Playing audio? " + this.state.playing);
         this.buttonContainer.current.classList.toggle("button--container--clicked");
-        this.volumeChanger.current.classList.toggle("button--volume--show");
+        
+        if (this.state.smallEl) {
+            this.volumeChanger.current.classList.toggle("button--volume--before--show");
+            this.setState((state) => ({
+                smallElToggle: !state.smallElToggle,
+            }))
+        } else if (!this.state.smallEl){
+            this.volumeChanger.current.classList.toggle("button--volume--show");
+        }
+
 
         //Playing/pausing the audio
         if (this.audio === null || this.audio === "" || this.audio === undefined) {
@@ -175,6 +207,10 @@ class Button extends Component {
         return userValue;
     }
 
+    componentDidMount() {
+        this.audioElement.current.volume = this.state.volume;
+    }
+
     render() {
         return(
             <div className = "button--group" ref = { this.buttonGroup }>
@@ -182,8 +218,8 @@ class Button extends Component {
 
                 <div className = "button--hover" ref = { this.buttonHover } ></div>
 
-                <div className = "button--volume" ref = { this.volumeChanger }>
-                    <input type = "range" onInput = { this.volume } />
+                <div className = "button--volume--before" ref = { this.volumeChanger }>
+                    <input type = "range" onInput = { this.volume } onChange = { this.volume }/>
                 </div>
 
                 <div className = "button--container" ref = { this.buttonContainer } onClick = { this.playPause }>
@@ -202,4 +238,5 @@ class Button extends Component {
     }
 }
 
-export default Button;
+const ButtonMemo = React.memo(Button);
+export default ButtonMemo;

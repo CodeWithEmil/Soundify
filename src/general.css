@@ -170,6 +170,22 @@
 .button--group .button--volume--show {
   transform: rotate(270deg) translateY(220%);
 }
+.button--group .button--volume--before {
+  transform: scale(0.1) rotate(270deg);
+  background: #f9fafb;
+  box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
+  padding: 10px;
+  border-radius: 12px;
+  position: absolute;
+  z-index: 0;
+  transition: ease-in 0.4s;
+}
+.button--group .button--volume--before input {
+  transform: scale(0.8);
+}
+.button--group .button--volume--before--show {
+  transform: rotate(270deg) translateY(270%);
+}
 .button--group .button--container {
   height: 9.75rem;
   width: 9.75rem;
