@@ -30,6 +30,10 @@ This is what people is thinking about Soundify:
 <ul style = "list-style-type: none">
   <li>
     <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify</h3>
-    <i>– Cristela de la Rosa, México</i>
+    <i>– Cristela de la Rosa, Mexico</i>
+  </li>
+  <li>
+    <h3>I really liked the way it was developed. I'm glad we have ideas like this in our community. Congrats, Emil.</h3>
+    <i>– Israel Nájera, Texas, USA</i>
   </li>
 </ul>
