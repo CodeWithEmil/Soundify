@@ -1,7 +1,8 @@
 # Soundify -- Get a better sense of life.
 
 Hey devs! My name is Emil, and I present to you Soundify! <br>
-Its purpose is to make you feel relaxed and comfortable by using a series of pre-recorded sounds.
+
+![Instagram story - 4](https://user-images.githubusercontent.com/96463540/152078320-d84a53fb-1e49-4aea-80a8-d0f8bbb4f27a.png)
 
 # Features
 Some of Soundify's most important features include:
