@@ -6,7 +6,7 @@ Hey devs! My name is Emil, and I present to you Soundify! <br>
 
 <hr>
 <br>
-# What is Soundify?
+# Huh
 <br>
 Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with this tool.
 
