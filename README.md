@@ -27,7 +27,7 @@ Some of Soundify's most remarkable features include:
 </ul>
 
 # Community
-This is what people is thinking about Soundify:
+This is what the community is thinking about Soundify:
 <ul style = "list-style-type: none">
   <li>
     <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify</h3>
