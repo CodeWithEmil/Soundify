@@ -7,17 +7,7 @@ Keep reading to get to know more about it. ↓↓↓
 
 
 # What is Soundify?
-Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found using these
-
-# Technologies
-Some of the technologies behind it:
-<ul>
-  <li><h3>HTML <i>– BuyMeACoffee</i></h3></li>
-  <li><h3>SCSS <i>– Styling</i></h3></li>
-  <li><h3>React <i>– Structuring and rendering</i></h3></li>
-  <li><h3>Git <i>– History and versions</i></h3></li>
-  <li><h3>Figma <i>– Design behind it</i></h3></li>
-</ul>
+Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found by pasting 'https://soundifyy.netlify.app' in the browser.
 
 # Features
 Some of Soundify's most remarkable features include:
@@ -34,6 +24,16 @@ Some of Soundify's most remarkable features include:
     <h3>No credit card, no charging.</h3>
     <p>Soundify is a completely free tool you can use whenever, wherever you are, without worrying about payment methods and similar stuff.</p>
   </li>
+</ul>
+
+# Technologies
+Some of the technologies behind it:
+<ul>
+  <li><h3>HTML <i>– BuyMeACoffee</i></h3></li>
+  <li><h3>SCSS <i>– Styling</i></h3></li>
+  <li><h3>React <i>– Structuring and rendering</i></h3></li>
+  <li><h3>Git <i>– History and versions</i></h3></li>
+  <li><h3>Figma <i>– Design behind it</i></h3></li>
 </ul>
 
 # Community
