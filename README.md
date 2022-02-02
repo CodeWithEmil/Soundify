@@ -60,3 +60,5 @@ This is what the community is thinking about Soundify:
     <i>– Diego Valencia, San Diego, California, USA</i>
   </li>
 </ul>
+
+# Get a better sense of life. Just. Relax.
