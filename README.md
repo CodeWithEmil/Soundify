@@ -41,4 +41,12 @@ This is what people is thinking about Soundify:
     <h3>Wow... It is an amazing idea. I think every person who has felt stressed at a point in their life should try out this tool. Since I started using it, my homework has been so much easier than before. 10 out of 10.</h3>
     <i>– Martina Rodríguez, Sevilla, Spain</i>
   </li>
+  <li>
+    <h3>It was an amazing idea. Loved Soundify! Hoping more great products from you</h3>
+    <i>– Four39Codes, India</i>
+  </li>
+  <li>
+    <h3>It is AMAZING!</h3>
+    <i>– Diego Valencia, San Diego, USA</i>
+  </li>
 </ul>
