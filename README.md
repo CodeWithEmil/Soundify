@@ -63,4 +63,4 @@ This is what the community is thinking about Soundify:
 
 # Get a better sense of life. Just. Relax.
 
-<i align-content = "right">© 2022</i>
+<i text-align = "right">CodeWithEmil ··· ©2022</i>
