@@ -35,7 +35,7 @@ This is what people is thinking about Soundify:
   </li>
   <li>
     <h3>I really liked the way it was developed. I'm glad we have ideas like this in our community. Congrats, Emil.</h3>
-    <i>– Israel Nájera, Texas, USA</i>
+    <i>– Israel Nájera, Houston, Texas, USA</i>
   </li>
   <li>
     <h3>Wow... It is an amazing idea. I think every person who has felt stressed at a point in their life should try out this tool. Since I started using it, my homework has been so much easier than before. 10 out of 10.</h3>
@@ -43,10 +43,10 @@ This is what people is thinking about Soundify:
   </li>
   <li>
     <h3>It was an amazing idea. Loved Soundify! Hoping more great products from you</h3>
-    <i>– Four39Codes, India</i>
+    <i>– Four39Codes, Kolhapur, India</i>
   </li>
   <li>
     <h3>It is AMAZING!</h3>
-    <i>– Diego Valencia, San Diego, USA</i>
+    <i>– Diego Valencia, San Diego, California, USA</i>
   </li>
 </ul>
