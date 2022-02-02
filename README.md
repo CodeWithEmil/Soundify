@@ -6,10 +6,10 @@ Hey devs! My name is Emil, and I present to you Soundify! <br>
 
 
 # What is Soundify?
-Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with this tool.
+Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances.
 
 # Features
-Some of Soundify's most important features include:
+Some of Soundify's most remarkable features include:
 <ul>
   <li>
     <h3>Designed to combat stress</h3>
@@ -22,5 +22,14 @@ Some of Soundify's most important features include:
   <li>
     <h3>No credit card, no charging.</h3>
     <p>Soundify is a completely free tool you can use whenever, wherever you are, without worrying about payment methods and similar stuff.</p>
+  </li>
+</ul>
+
+# Community
+This is what people is thinking about Soundify:
+<ul style = "list-style-type: none">
+  <li>
+    <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify</h3>
+    <i>– Cristela de la Rosa, México</i>
   </li>
 </ul>
