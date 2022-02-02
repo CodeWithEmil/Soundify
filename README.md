@@ -63,4 +63,4 @@ This is what the community is thinking about Soundify:
 
 # Get a better sense of life. Just. Relax.
 
---:© 2022
+--: © 2022
