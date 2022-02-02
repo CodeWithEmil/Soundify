@@ -1,12 +1,13 @@
 # Soundify -- Get a better sense of life.
 
-Hey devs! My name is Emil, and I present to you Soundify! <br>
+Hey devs! My name is Emil, and I'm glad to present you Soundify! <br>
+Keep reading to get to know more about it. ↓↓↓ 
 
 ![Instagram story - 6](https://user-images.githubusercontent.com/96463540/152078651-b264b175-e4d9-48b6-a598-4fc962fbcbf3.png)
 
 
 # What is Soundify?
-Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances.
+Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found using these
 
 # Features
 Some of Soundify's most remarkable features include:
