@@ -2,7 +2,8 @@
 
 Hey devs! My name is Emil, and I present to you Soundify! <br>
 
-![Instagram story - 5](https://user-images.githubusercontent.com/96463540/152078473-add7ef08-10f4-4341-ad5a-4ea8cc2b2900.png)
+![Instagram story - 6](https://user-images.githubusercontent.com/96463540/152078651-b264b175-e4d9-48b6-a598-4fc962fbcbf3.png)
+
 
 # Features
 Some of Soundify's most important features include:
