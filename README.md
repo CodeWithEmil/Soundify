@@ -30,7 +30,7 @@ Some of Soundify's most remarkable features include:
 This is what the community is thinking about Soundify:
 <ul style = "list-style-type: none">
   <li>
-    <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify</h3>
+    <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify.</h3>
     <i>– Cristela de la Rosa, Querétaro, Mexico</i>
   </li>
   <li>
@@ -42,7 +42,7 @@ This is what the community is thinking about Soundify:
     <i>– Martina Rodríguez, Sevilla, Spain</i>
   </li>
   <li>
-    <h3>It was an amazing idea. Loved Soundify! Hoping more great products from you</h3>
+    <h3>It was an amazing idea. Loved Soundify! Hoping more great products from you.</h3>
     <i>– Four39Codes, Kolhapur, India</i>
   </li>
   <li>
