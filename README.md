@@ -1,4 +1,4 @@
-# Soundify -- Get a better sense of life.
+# Soundify –– Get a better sense of life.
 
 Hey devs! My name is Emil, and I'm glad to present to you Soundify! <br>
 Keep reading to get to know more about it. ↓↓↓ 
