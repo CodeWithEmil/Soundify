@@ -7,7 +7,7 @@ Keep reading to get to know more about it. ↓↓↓
 
 
 # What is Soundify?
-Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found by pasting 'https://soundify.net' in the browser.
+Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found by pasting 'https://soundify.net' on the browser. Hop to a different world!
 
 # Features
 Some of Soundify's most remarkable features include:
