@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Soundify –– Get a better sense of life.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hey devs! My name is Emil, and I'm glad to present to you Soundify! <br>
+Keep reading to get to know more about it. 👇🔥
 
-## Available Scripts
+![Instagram story - 6](https://user-images.githubusercontent.com/96463540/152078651-b264b175-e4d9-48b6-a598-4fc962fbcbf3.png)
 
-In the project directory, you can run:
 
-### `npm start`
+# What is Soundify?
+Soundify is an amazing tool. Have you ever felt like you have no way out of a situation? No worries. Soundify is here. Escape from reality and minimize your problems after relaxing with sounds. 16 sounds, endless combinations. Create your own mixes, combos and performances. Soundify can be found by pasting 'https://soundify.net' on the browser. Hop to a different world!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Features
+Some of Soundify's most remarkable features include:
+<ul>
+  <li>
+    <h3>Designed to combat stress</h3>
+    <p>Soundify was designed to combat daily-life stress. Take a moment for you.</p>
+  </li>
+  <li>
+    <h3>Endless combinatinons.</h3>
+    <p>Choose from 16 different sounds and create your own mixes!</p>
+  </li>
+  <li>
+    <h3>No credit card, no charging.</h3>
+    <p>Soundify is a completely free tool you can use whenever, wherever you are, without worrying about payment methods and similar stuff.</p>
+  </li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Technologies
+Some of the technologies behind it:
+<ul>
+  <li><h3>HTML <i>– BuyMeACoffee</i></h3></li>
+  <li><h3>SCSS <i>– Styling</i></h3></li>
+  <li><h3>React <i>– Structuring and rendering</i></h3></li>
+  <li><h3>Git <i>– History and versions</i></h3></li>
+  <li><h3>Figma <i>– Design behind it</i></h3></li>
+</ul>
 
-### `npm test`
+# Community
+This is what the community is thinking about Soundify:
+<ul style = "list-style-type: none">
+  <li>
+    <h3>I'd give it a 4 over 5. I got really relaxed the first time I worked with it. From that moment on, my job at the office has been so much easier. Thanks, Soundify.</h3>
+    <i>– Cristela de la Rosa, Querétaro, Mexico</i>
+  </li>
+  <li>
+    <h3>I really liked the way it was developed. I'm glad we have ideas like this in our community. Congrats, Emil.</h3>
+    <i>– Israel Nájera, Houston, Texas, USA</i>
+  </li>
+  <li>
+    <h3>Wow... It is an amazing idea. I think every person who has felt stressed at a point in their life should try out this tool. Since I started using it, my homework has been so much easier than before. 10 out of 10.</h3>
+    <i>– Martina Rodríguez, Sevilla, Spain</i>
+  </li>
+  <li>
+    <h3>It was an amazing idea. Loved Soundify! Hoping more great products from you.</h3>
+    <i>– Four39Codes, Kolhapur, India</i>
+  </li>
+  <li>
+    <h3>It is AMAZING!</h3>
+    <i>– Diego Valencia, San Diego, California, USA</i>
+  </li>
+</ul>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Get a better sense of life. Just. Relax.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<i text-align = "right">CodeWithEmil ··· © 2022</i>
