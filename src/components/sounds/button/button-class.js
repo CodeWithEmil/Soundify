@@ -18,7 +18,7 @@ class Button extends Component {
         this.buttonGroup = React.createRef();
         this.audioElement = React.createRef();
         this.buttonHover = React.createRef();
-        this.buttonContainer = React.createRef();
+        this.buttonContainer = React.createRef()//this.props.innerRef;
         this.volumeChanger = React.createRef();
 
         //State
@@ -219,10 +219,10 @@ class Button extends Component {
                 <div className = "button--hover" ref = { this.buttonHover } ></div>
 
                 <div className = "button--volume--before" ref = { this.volumeChanger }>
-                    <input type = "range" onInput = { this.volume } onChange = { this.volume }/>
+                    <input type = "range" onInput = { this.volume } onChange = { this.volume } />
                 </div>
 
-                <div className = "button--container" ref = { this.buttonContainer } onClick = { this.playPause }>
+                <div className = "button--container" ref = { this.buttonContainer } onClick = { this.playPause } >
                     <div className = "button--name">
                         <h3>{ this.props.name }</h3>
                     </div>
@@ -240,3 +240,4 @@ class Button extends Component {
 
 const ButtonMemo = React.memo(Button);
 export default ButtonMemo;
+//export default React.forwardRef((props, ref) => <ButtonMemo innerRef={ref} {...props} />);

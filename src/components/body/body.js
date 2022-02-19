@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Info from "../info/info";
-import Sounds from "../sounds/sounds";
+import Sounds from "../sounds/sounds-func";
 
 class Body extends Component {
     constructor() {
