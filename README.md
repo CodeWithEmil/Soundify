@@ -1,6 +1,6 @@
 # Soundify –– Get a better sense of life.
 
-Hey devs! My name is E, and I'm glad to present to you Soundify! <br>
+Hey devs! My name is Em, and I'm glad to present to you Soundify! <br>
 Keep reading to get to know more about it. 👇🔥
 
 ![Instagram story - 6](https://user-images.githubusercontent.com/96463540/152078651-b264b175-e4d9-48b6-a598-4fc962fbcbf3.png)
