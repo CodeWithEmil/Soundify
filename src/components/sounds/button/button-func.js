@@ -4,7 +4,6 @@ import { forwardRef, useRef, useImperativeHandle, useState } from "react";
 
 
 const Button1 = forwardRef((props, ref) => {
-
     //Properties
     let name = props.name;
     let icon = props.icon;
@@ -61,6 +60,35 @@ const Button1 = forwardRef((props, ref) => {
         },
     });
 
+    let styling = e => {
+        e.preventDefault();
+
+        if (container.current.scrollTop === 0) {
+            buttonContainer.current.classList.add("button--container--after");
+            buttonHover.current.classList.add("button--container--after");
+            volumeChanger.current.classList.remove("button--volume--before");
+            volumeChanger.current.classList.remove("button--volume--before--show");
+            volumeChanger.current.classList.add("button--volume");
+
+            //Styles for the input element if the button was pressed (input shown) while changing from position
+            if(smallElToggle && !smallElCounter) {
+                //this.volumeChanger.current.classList.add("button--volume--before--show");
+                volumeChanger.current.classList.remove("button--volume--before--show");
+                volumeChanger.current.classList.add("button--volume--show");
+                
+                /*this.setState({
+                    smallElCounter: true
+                })*/
+
+                setSmallElCounter(true);
+            }
+
+            /*this.setState({
+                smallEl: false
+            })*/
+            setSmallEl(false);
+        }
+    }
 
     let manageVolume = (e) => {
         e.preventDefault();
@@ -71,91 +99,41 @@ const Button1 = forwardRef((props, ref) => {
             volume: userValue,
         });*/
 
-        setVolume(userValue)
-
+        setVolume(userValue);
         audioElement.current.volume = volume;
 
         return userValue;
     };
 
-    return <h1>hello world</h1>;
-})
-
-class Button extends Component {
-    constructor(props) {
-        super(props);
-
-        //State
-        this.state = {
-            playing: true,
-            volume: 0.5,
-            
-            //State regarding element's size
-            smallEl: true,
-            smallElToggle: false,
-            smallElCounter: false
-        }
-
-        //Executing methods
-        window.addEventListener('scroll', this.styling);
-    }
-
-    //Some styles when we scroll the page
-    styling = e => {
-        e.preventDefault();
-
-        if (this.container.current.scrollTop === 0) {
-            this.buttonContainer.current.classList.add("button--container--after");
-            this.buttonHover.current.classList.add("button--container--after");
-            this.volumeChanger.current.classList.remove("button--volume--before");
-            this.volumeChanger.current.classList.remove("button--volume--before--show");
-            this.volumeChanger.current.classList.add("button--volume");
-
-            //Styles for the input element if the button was pressed (input shown) while changing from position
-            if(this.state.smallElToggle && !this.state.smallElCounter) {
-                //this.volumeChanger.current.classList.add("button--volume--before--show");
-                this.volumeChanger.current.classList.remove("button--volume--before--show");
-                this.volumeChanger.current.classList.add("button--volume--show");
-                
-                this.setState({
-                    smallElCounter: true
-                })
-            }
-
-            this.setState({
-                smallEl: false
-            })
-        }
-    }
-
-    //Playing and pausing the audio
-    playPause = e => {
+    let playPause = e => {
         e.preventDefault();
 
         //Clearing previous notifications
         toast.remove();
 
         //Displaying wether if it is playing or not
-        console.log("Playing audio? " + this.state.playing);
-        this.buttonContainer.current.classList.toggle("button--container--clicked");
+        console.log(`Playing audio? ${playing}`);
+        buttonContainer.current.classList.toggle("button--container--clicked");
         
-        if (this.state.smallEl) {
-            this.volumeChanger.current.classList.toggle("button--volume--before--show");
-            this.setState((state) => ({
+        if (smallEl) {
+            volumeChanger.current.classList.toggle("button--volume--before--show");
+            /*this.setState((state) => ({
                 smallElToggle: !state.smallElToggle,
-            }))
-        } else if (!this.state.smallEl){
-            this.volumeChanger.current.classList.toggle("button--volume--show");
+            }))*/
+
+            setSmallElToggle(!smallElToggle)
+        } else if (!smallEl){
+            volumeChanger.current.classList.toggle("button--volume--show");
         }
 
 
         //Playing/pausing the audio
-        if (this.audio === null || this.audio === "" || this.audio === undefined) {
+        if (audio === null || audio === "" || audio === undefined) {
             //window.alert("Error 001: Source not found.");
-            this.buttonContainer.current.classList.remove("button--container--clicked");
-            this.volumeChanger.current.classList.remove("button--volume--show");
+            buttonContainer.current.classList.remove("button--container--clicked");
+            volumeChanger.current.classList.remove("button--volume--show");
 
-            this.notif = () => toast.error(`Not found: '${this.name}'`, {
+            notif = () => toast.error(`Not found: '${name}'`, {
             //Custom icon
                 icon: "😞",
         
@@ -171,10 +149,10 @@ class Button extends Component {
                 //Id
                 id: "notif"
             });
-        } else if(this.state.playing) {
-            this.audioElement.current.play();
+        } else if(playing) {
+            audioElement.current.play();
 
-            this.notif = () => toast.success(`Playing '${this.name}'`, {
+            notif = () => toast.success(`Playing '${name}'`, {
                 //Custom icon
                 icon: "🥑", //😄 , 🍀 , 🥑
         
@@ -187,11 +165,11 @@ class Button extends Component {
                   //Id
                   id: "notif"
             });
-        } else if (!this.state.playing) {
-            this.audioElement.current.pause();
+        } else if (!playing) {
+            audioElement.current.pause();
             //this.audioElement.current.volume = "50%";
 
-            this.notif = () => toast.error(`Paused '${this.name}'`, {
+            notif = () => toast.error(`Paused '${name}'`, {
                 //Custom icon
                 icon: "🍿", //😕 , 🍿
         
@@ -207,7 +185,7 @@ class Button extends Component {
         } else {
             //window.confirm("An unknown error ocurred. Maybe try again?");
 
-            this.notif = () => toast.error(`An unknown error occurred!`, {
+            notif = () => toast.error(`An unknown error occurred!`, {
                 //Custom icon
                 icon: "🤔", //🤔
         
@@ -223,14 +201,28 @@ class Button extends Component {
         }
 
         //Changing the State's values
-        this.setState({
+        /*this.setState({
             playing: !this.state.playing
-        })
+        })*/
+
+        setPlaying(!playing);
         
         //Displaying a Toast (notification)
         toast.remove();
-        return this.notif();
+        return notif();
     }
+
+    //Executing methods
+    //window.addEventListener("scroll", this.styling);
+
+    return <h1>hello world</h1>;
+})
+
+class Button extends Component {
+    //Some styles when we scroll the page
+
+    //Playing and pausing the audio
+    
 
     /*volume = e => {
         e.preventDefault();
