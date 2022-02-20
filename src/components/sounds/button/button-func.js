@@ -4,19 +4,40 @@ import { forwardRef, useRef, useImperativeHandle, useState } from "react";
 
 
 const Button1 = forwardRef((props, ref) => {
-
     let [playing, setPlaying] = useState(true);
-    
 
     useImperativeHandle(ref, () => ({
         showAlert() {
             alert("Hello from Child Component");
         },
-    }))
+    }));
 
-    return(
-        <h1>hello world</h1>
-    )
+    //The notification using https://react-hot-toast.com/
+    let notif = () => toast.promise(`Default '${this.name}'`, {
+        //Custom icon
+        icon: "🚀",
+
+        //Colors and styling
+        iconTheme: {
+            primary: "#24292f",
+            secondary: "#f9fafb",
+        },
+        style: {
+            "box-shadow": "rgba(17, 12, 46, 0.041) 0 48px 100px 0",
+        },
+
+        //Data
+        id: "notif",
+        className: "lighterShadow",
+
+        //Aria
+        ariaProps: {
+            role: "status",
+            "aria-live": "polite",
+        },
+    });
+
+    return <h1>hello world</h1>;
 })
 
 class Button extends Component {
@@ -81,31 +102,6 @@ class Button extends Component {
             })
         }
     }
-
-    //The notification using https://react-hot-toast.com/
-    notif = () => toast.promise(`Default '${this.name}'`, {
-        //Custom icon
-        icon: "🚀",
-
-        //Colors and styling
-        iconTheme: {
-            primary: '#24292f',
-            secondary: '#f9fafb',
-        },
-        style: {
-            "box-shadow": "rgba(17, 12, 46, 0.041) 0 48px 100px 0"
-        },
-
-        //Data
-        id: "notif",
-        className: "lighterShadow",
-
-        //Aria
-        ariaProps: {
-            role: "status",
-            "aria-live": "polite"
-        }
-    });
 
     //Playing and pausing the audio
     playPause = e => {
