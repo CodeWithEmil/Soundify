@@ -1,13 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import toast, { Toaster } from 'react-hot-toast';
-import { forwardRef, useRef, useImperativeHandle, useState } from "react";
+import { forwardRef, useRef, useState, useEffect, useImperativeHandle } from "react";
 
 
 const Button1 = forwardRef((props, ref) => {
     //Properties
     let name = props.name;
     let icon = props.icon;
-    let sound = props.sound;
     let audio = props.audio;
 
     //Included elements
@@ -212,62 +211,48 @@ const Button1 = forwardRef((props, ref) => {
         return notif();
     }
 
-    //Executing methods
-    //window.addEventListener("scroll", this.styling);
 
-    return <h1>hello world</h1>;
+    useEffect(() => {
+        audioElement.current.volume = volume;
+    });
+
+
+    //Executing methods
+    window.addEventListener("scroll", styling);
+
+    //return <h1>hello world</h1>;
+    return (
+        <div className="button--group" ref={buttonGroup}>
+            <audio ref={audioElement} src={audio} type="audio/mpeg" loop />
+
+            <div className="button--hover" ref={buttonHover}></div>
+
+            <div className="button--volume--before" ref={volumeChanger}>
+                <input
+                    type="range"
+                    onInput={manageVolume}
+                    onChange={manageVolume}
+                />
+            </div>
+
+            <div
+                className="button--container"
+                ref={buttonContainer}
+                onClick={playPause}
+            >
+                <div className="button--name">
+                    <h3>{name}</h3>
+                </div>
+                <div className="button--icon">
+                    <i className={icon}></i>
+                </div>
+            </div>
+
+            <Toaster />
+        </div>
+    );
 })
 
-class Button extends Component {
-    //Some styles when we scroll the page
-
-    //Playing and pausing the audio
-    
-
-    /*volume = e => {
-        e.preventDefault();
-        const userValue = e.target.value / 100;
-        console.log(userValue)
-
-        this.setState({
-            volume: userValue
-        })
-
-        this.audioElement.current.volume = this.state.volume;
-
-        return userValue;
-    }*/
-
-    componentDidMount() {
-        this.audioElement.current.volume = this.state.volume;
-    }
-
-    render() {
-        return(
-            <div className = "button--group" ref = { this.buttonGroup }>
-                <audio ref = { this.audioElement } src = { this.audio } type="audio/mpeg" loop />
-
-                <div className = "button--hover" ref = { this.buttonHover } ></div>
-
-                <div className = "button--volume--before" ref = { this.volumeChanger }>
-                    <input type = "range" onInput = { this.volume } onChange = { this.volume } />
-                </div>
-
-                <div className = "button--container" ref = { this.buttonContainer } onClick = { this.playPause } >
-                    <div className = "button--name">
-                        <h3>{ this.props.name }</h3>
-                    </div>
-                    <div className = "button--icon">
-                        <i className = {this.props.icon}></i>
-                    </div>
-                </div>
-
-                <Toaster />
-
-            </div>
-        )
-    }
-}
 
 const ButtonMemo = React.memo(Button1);
 export default ButtonMemo;

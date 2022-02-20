@@ -240,4 +240,3 @@ class Button extends Component {
 
 const ButtonMemo = React.memo(Button);
 export default ButtonMemo;
-//export default React.forwardRef((props, ref) => <ButtonMemo innerRef={ref} {...props} />);
