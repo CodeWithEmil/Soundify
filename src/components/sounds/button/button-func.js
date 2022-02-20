@@ -3,7 +3,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { forwardRef, useRef, useState, useEffect, useImperativeHandle } from "react";
 
 
-const Button1 = forwardRef((props, ref) => {
+const Button = forwardRef((props, ref) => {
     //Properties
     let name = props.name;
     let icon = props.icon;
@@ -27,12 +27,6 @@ const Button1 = forwardRef((props, ref) => {
     let [smallEl, setSmallEl] = useState(true);
     let [smallElToggle, setSmallElToggle] = useState(false);
     let [smallElCounter, setSmallElCounter] = useState(false);
-
-    useImperativeHandle(ref, () => ({
-        showAlert() {
-            alert("Hello from Child Component");
-        },
-    }));
 
     //The notification using https://react-hot-toast.com/
     let notif = () => toast.promise(`Default '${this.name}'`, {
@@ -59,6 +53,7 @@ const Button1 = forwardRef((props, ref) => {
         },
     });
 
+    //Styling onscroll
     let styling = e => {
         e.preventDefault();
 
@@ -89,6 +84,7 @@ const Button1 = forwardRef((props, ref) => {
         }
     }
 
+    //Managing volume
     let manageVolume = (e) => {
         e.preventDefault();
         const userValue = e.target.value / 100;
@@ -104,6 +100,7 @@ const Button1 = forwardRef((props, ref) => {
         return userValue;
     };
 
+    //Playing and pausing the audio
     let playPause = e => {
         e.preventDefault();
 
@@ -212,6 +209,13 @@ const Button1 = forwardRef((props, ref) => {
     }
 
 
+    //Use methods
+    useImperativeHandle(ref, () => ({
+        showAlert() {
+            alert(`Hello from ${name} Child Component`);
+        },
+    }));
+
     useEffect(() => {
         audioElement.current.volume = volume;
     });
@@ -254,6 +258,6 @@ const Button1 = forwardRef((props, ref) => {
 })
 
 
-const ButtonMemo = React.memo(Button1);
+const ButtonMemo = React.memo(Button);
 export default ButtonMemo;
 //export default React.forwardRef((props, ref) => <ButtonMemo innerRef={ref} {...props} />);
