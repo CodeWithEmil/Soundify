@@ -4,7 +4,23 @@ import { useRef } from "react";
 
 function Sounds(props) {
 
-    const buttonCompRef = useRef();
+    //Components
+    const rainCompRef = useRef();
+    const libraryCompRef = useRef();
+    const oceanCompRef = useRef();
+    const campfireCompRef = useRef();
+    const thunderCompRef = useRef();
+    const keyboardCompRef = useRef();
+    const windCompRef = useRef();
+    const tickingCompRef = useRef();
+    const snowCompRef = useRef();
+    const cafeCompRef = useRef();
+    const bathCompRef = useRef();
+    const radioCompRef = useRef();
+    const riverCompRef = useRef();
+    const birdsCompRef = useRef();
+    const crowdCompRef = useRef();
+    const treesCompRef = useRef();
 
     //References
     let container = React.useRef(null);
@@ -25,32 +41,36 @@ function Sounds(props) {
         let r = Math.floor(Math.random() * (max - min + 1)) + min;
         let d = undefined;
 
-        if (r === 1) d = "Rain";
-        else if (r === 2) d = "Thunder";
-        else if (r === 3) d = "Snow";
-        else if (r === 4) d = "River";
-        else if (r === 5) d = "Library";
-        else if (r === 6) d = "Keyboard";
-        else if (r === 7) d = "Café";
-        else if (r === 8) d = "Birds";
-        else if (r === 9) d = "Ocean";
-        else if (r === 10) d = "Wind";
-        else if (r === 11) d = "Bath";
-        else if (r === 12) d = "Crowd";
-        else if (r === 13) d = "Campfire";
-        else if (r === 14) d = "Ticking";
-        else if (r === 15) d = "Radio";
-        else if (r === 16) d = "Trees";
+        if (r === 1) d = [rainCompRef, "Rain"];
+        else if (r === 2) d = [thunderCompRef, "Thunder"];
+        else if (r === 3) d = [snowCompRef, "Snow"];
+        else if (r === 4) d = [riverCompRef, "River"];
+        else if (r === 5) d = [libraryCompRef, "Library"];
+        else if (r === 6) d = [keyboardCompRef, "Keyboard"];
+        else if (r === 7) d = [cafeCompRef, "Café"];
+        else if (r === 8) d = [birdsCompRef, "Birds"];
+        else if (r === 9) d = [oceanCompRef, "Ocean"];
+        else if (r === 10) d = [windCompRef, "Wind"];
+        else if (r === 11) d = [bathCompRef, "Bath"];
+        else if (r === 12) d = [crowdCompRef, "Crowd"];
+        else if (r === 13) d = [campfireCompRef, "Campfire"];
+        else if (r === 14) d = [tickingCompRef, "Ticking"];
+        else if (r === 15) d = [radioCompRef, "Radio"];
+        else if (r === 16) d = [treesCompRef, "Trees"];
         else d = undefined;
 
-        return d;
+        console.log(d[1])
+        return d[0];
     };
 
     let randomSounds = () => {
         let s1 = randomNum(1, 16);
-        console.log(s1);
+        let s2 = randomNum(1, 16);
+        let s3 = randomNum(1, 16);
 
-        buttonCompRef.current.showAlert();
+        s1.current.showAlert();
+        s2.current.showAlert();
+        s3.current.showAlert();
     };
 
     window.addEventListener("scroll", styling);
@@ -91,7 +111,7 @@ function Sounds(props) {
                             icon="fas fa-cloud-rain"
                             container={container}
                             audio={require("./audio/rain.mp3")}
-                            ref={buttonCompRef}
+                            ref={rainCompRef}
                         />
                     </div>
 
@@ -101,6 +121,7 @@ function Sounds(props) {
                             icon="fas fa-bolt"
                             container={container}
                             audio={require("./audio/thunder.mp3")}
+                            ref={thunderCompRef}
                         />
                     </div>
 
@@ -110,6 +131,7 @@ function Sounds(props) {
                             icon="fas fa-snowflake"
                             container={container}
                             audio={require("./audio/snow.mp3")}
+                            ref={snowCompRef}
                         />
                     </div>
 
@@ -119,6 +141,7 @@ function Sounds(props) {
                             icon="fas fa-water"
                             container={container}
                             audio={require("./audio/river-1.mp3")}
+                            ref={riverCompRef}
                         />
                     </div>
                 </div>
@@ -130,6 +153,7 @@ function Sounds(props) {
                             icon="fas fa-book"
                             container={container}
                             audio={undefined}
+                            ref={libraryCompRef}
                         />
                     </div>
 
@@ -139,6 +163,7 @@ function Sounds(props) {
                             icon="fas fa-keyboard"
                             container={container}
                             audio={require("./audio/keyboard.mp3")}
+                            ref={keyboardCompRef}
                         />
                     </div>
 
@@ -148,6 +173,7 @@ function Sounds(props) {
                             icon="fas fa-mug-hot"
                             container={container}
                             audio={require("./audio/cafe.mp3")}
+                            ref={cafeCompRef}
                         />
                     </div>
 
@@ -157,6 +183,7 @@ function Sounds(props) {
                             icon="fas fa-dove"
                             container={container}
                             audio={require("./audio/birds.mp3")}
+                            ref={birdsCompRef}
                         />
                     </div>
                 </div>
@@ -168,6 +195,7 @@ function Sounds(props) {
                             icon="fas fa-anchor"
                             container={container}
                             audio={require("./audio/ocean.mp3")}
+                            ref={oceanCompRef}
                         />
                     </div>
 
@@ -177,6 +205,7 @@ function Sounds(props) {
                             icon="fas fa-wind"
                             container={container}
                             audio={require("./audio/wind-2.mp3")}
+                            ref={windCompRef}
                         />
                     </div>
 
@@ -186,6 +215,7 @@ function Sounds(props) {
                             icon="fas fa-bath"
                             container={container}
                             audio={require("./audio/bath.mp3")}
+                            ref={bathCompRef}
                         />
                     </div>
 
@@ -195,6 +225,7 @@ function Sounds(props) {
                             icon="fas fa-users"
                             container={container}
                             audio={require("./audio/crowd.mp3")}
+                            ref={crowdCompRef}
                         />
                     </div>
                 </div>
@@ -206,6 +237,7 @@ function Sounds(props) {
                             icon="fas fa-fire"
                             container={container}
                             audio={require("./audio/campfire.mp3")}
+                            ref={campfireCompRef}
                         />
                     </div>
 
@@ -215,6 +247,7 @@ function Sounds(props) {
                             icon="fas fa-clock"
                             container={container}
                             audio={require("./audio/ticking.mp3")}
+                            ref={tickingCompRef}
                         />
                     </div>
 
@@ -224,6 +257,7 @@ function Sounds(props) {
                             icon="fas fa-broadcast-tower"
                             container={container}
                             audio={require("./audio/radio-2.mp3")}
+                            ref={radioCompRef}
                         />
                     </div>
 
@@ -233,6 +267,7 @@ function Sounds(props) {
                             icon="fas fa-tree"
                             container={container}
                             audio={require("./audio/forest.mp3")}
+                            ref={treesCompRef}
                         />
                     </div>
                 </div>
