@@ -4,7 +4,31 @@ import { forwardRef, useRef, useImperativeHandle, useState } from "react";
 
 
 const Button1 = forwardRef((props, ref) => {
+
+    //Properties
+    let name = props.name;
+    let icon = props.icon;
+    let sound = props.sound;
+    let audio = props.audio;
+
+    //Included elements
+    let container = props.container;
+
+    //References
+    let buttonGroup = useRef(null); //React.createRef();
+    let audioElement = useRef(null);
+    let buttonHover = useRef(null);
+    let buttonContainer = useRef(null); //let props.innerRef;
+    let volumeChanger = useRef(null);
+
+    //State
     let [playing, setPlaying] = useState(true);
+    let [volume, setVolume] = useState(0.5);
+
+    //State regarding element's size
+    let [smallEl, setSmallEl] = useState(true);
+    let [smallElToggle, setSmallElToggle] = useState(false);
+    let [smallElCounter, setSmallElCounter] = useState(false);
 
     useImperativeHandle(ref, () => ({
         showAlert() {
@@ -37,28 +61,29 @@ const Button1 = forwardRef((props, ref) => {
         },
     });
 
+
+    let manageVolume = (e) => {
+        e.preventDefault();
+        const userValue = e.target.value / 100;
+        console.log(userValue);
+
+        /*this.setState({
+            volume: userValue,
+        });*/
+
+        setVolume(userValue)
+
+        audioElement.current.volume = volume;
+
+        return userValue;
+    };
+
     return <h1>hello world</h1>;
 })
 
 class Button extends Component {
     constructor(props) {
         super(props);
-
-        //Properties
-        this.name = this.props.name;
-        this.icon = this.props.icon;
-        this.sound = this.props.sound;
-        this.audio = this.props.audio;
-
-        //Included elements
-        this.container = this.props.container;
-
-        //References
-        this.buttonGroup = React.createRef();
-        this.audioElement = React.createRef();
-        this.buttonHover = React.createRef();
-        this.buttonContainer = React.createRef()//this.props.innerRef;
-        this.volumeChanger = React.createRef();
 
         //State
         this.state = {
@@ -207,7 +232,7 @@ class Button extends Component {
         return this.notif();
     }
 
-    volume = e => {
+    /*volume = e => {
         e.preventDefault();
         const userValue = e.target.value / 100;
         console.log(userValue)
@@ -219,7 +244,7 @@ class Button extends Component {
         this.audioElement.current.volume = this.state.volume;
 
         return userValue;
-    }
+    }*/
 
     componentDidMount() {
         this.audioElement.current.volume = this.state.volume;
