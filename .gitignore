@@ -10,8 +10,8 @@
 /src/components/info/useScript.js
 
 # extra
-/src/images
-/src/components/sounds/audio
+#/src/images
+#/src/components/sounds/audio
 /readme1.md
 
 # production
