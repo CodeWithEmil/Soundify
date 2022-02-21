@@ -29,6 +29,9 @@ function Sounds(props) {
     let great = React.useRef(null);
     let random = React.useRef(null);
 
+    //Data Management
+    //let soundsChosen = [];
+
     let styling = (e) => {
         e.preventDefault();
 
@@ -67,6 +70,15 @@ function Sounds(props) {
         let s1 = randomNum(1, 16);
         let s2 = randomNum(1, 16);
         let s3 = randomNum(1, 16);
+
+        /*soundsChosen[0].current.pause();
+        soundsChosen[1].current.pause();
+        soundsChosen[2].current.pause();
+
+        soundsChosen.length = 0;
+        soundsChosen.push(s1);
+        soundsChosen.push(s2);
+        soundsChosen.push(s3);*/
 
         s1.current.playPause();
         s2.current.playPause();

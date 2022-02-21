@@ -331,6 +331,62 @@ const Button = forwardRef((props, ref) => {
             audioElement.current.volume = userValueHundred;
             inputAudio.current.value = value;
         },
+        play() {
+            volumeChanger.current.classList.add("button--volume--before--show");
+            setPlaying(true);
+
+            //Playing/pausing the audio
+            if (audio === null || audio === "" || audio === undefined) {
+                //window.alert("Error 001: Source not found.");
+                buttonContainer.current.classList.remove(
+                    "button--container--clicked"
+                );
+                volumeChanger.current.classList.remove("button--volume--show");
+
+                notif = () =>
+                    toast.error(`Not found: '${name}'`, {
+                        //Custom icon
+                        icon: "😞",
+
+                        //Colors
+                        iconTheme: {
+                            primary: "#24292f",
+                            secondary: "#f9fafb",
+                        },
+                        /*style: {
+                        "box-shadow": "rgba(17, 12, 46, 0.041) 0 48px 100px 0"
+                    },*/
+
+                        //Id
+                        id: "notif",
+                    });
+            } else if (playing) {
+                audioElement.current.play();
+                buttonContainer.current.classList.add(
+                    "button--container--clicked"
+                );
+
+                notif = () => toast.success(`Playing '${name}'`, {
+                    //Custom icon
+                    icon: "🥑", //😄 , 🍀 , 🥑
+
+                    //Colors
+                    iconTheme: {
+                        primary: "#24292f",
+                        secondary: "#f9fafb",
+                    },
+
+                    //Id
+                    id: "notif",
+                });
+            } 
+        },
+        pause() {
+            setPlaying(!playing);
+            audioElement.current.pause();
+            buttonContainer.current.classList.remove("button--container--clicked");
+            volumeChanger.current.classList.remove("button--volume--show");
+        }
     }));
 
     useEffect(() => {
