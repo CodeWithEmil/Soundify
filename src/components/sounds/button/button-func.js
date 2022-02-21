@@ -15,6 +15,7 @@ const Button = forwardRef((props, ref) => {
     //References
     let buttonGroup = useRef(null); //React.createRef();
     let audioElement = useRef(null);
+    let inputAudio = useRef(null);
     let buttonHover = useRef(null);
     let buttonContainer = useRef(null); //let props.innerRef;
     let volumeChanger = useRef(null);
@@ -111,6 +112,8 @@ const Button = forwardRef((props, ref) => {
         console.log(`Playing audio? ${playing}`);
         buttonContainer.current.classList.toggle("button--container--clicked");
         
+
+        //!CHANGE THIS SO THAT IT DOESN'T BUG WHEN CLICKING ON RANDOM FUNCTION
         if (smallEl) {
             volumeChanger.current.classList.toggle("button--volume--before--show");
             /*this.setState((state) => ({
@@ -211,8 +214,122 @@ const Button = forwardRef((props, ref) => {
 
     //Use methods
     useImperativeHandle(ref, () => ({
-        showAlert() {
-            alert(`Hello from ${name} Child Component`);
+        playPause() {
+
+            //Clearing previous notifications
+            toast.remove();
+
+            //Displaying wether if it is playing or not
+            console.log(`Playing audio? ${playing}`);
+            buttonContainer.current.classList.toggle("button--container--clicked");
+            
+            if (smallEl) {
+                volumeChanger.current.classList.toggle("button--volume--before--show");
+                /*this.setState((state) => ({
+                    smallElToggle: !state.smallElToggle,
+                }))*/
+
+                setSmallElToggle(!smallElToggle)
+            } else if (!smallEl){
+                volumeChanger.current.classList.toggle("button--volume--show");
+            }
+
+
+            //Playing/pausing the audio
+            if (audio === null || audio === "" || audio === undefined) {
+                //window.alert("Error 001: Source not found.");
+                buttonContainer.current.classList.remove("button--container--clicked");
+                volumeChanger.current.classList.remove("button--volume--show");
+
+                notif = () => toast.error(`Not found: '${name}'`, {
+                //Custom icon
+                    icon: "😞",
+            
+                    //Colors
+                    iconTheme: {
+                        primary: '#24292f',
+                        secondary: '#f9fafb',
+                    },
+                    /*style: {
+                        "box-shadow": "rgba(17, 12, 46, 0.041) 0 48px 100px 0"
+                    },*/
+            
+                    //Id
+                    id: "notif"
+                });
+            } else if(playing) {
+                audioElement.current.play();
+
+                notif = () => toast.success(`Playing '${name}'`, {
+                    //Custom icon
+                    icon: "🥑", //😄 , 🍀 , 🥑
+            
+                    //Colors
+                    iconTheme: {
+                        primary: '#24292f',
+                        secondary: '#f9fafb',
+                        },
+            
+                        //Id
+                        id: "notif"
+                });
+            } else if (!playing) {
+                audioElement.current.pause();
+                //this.audioElement.current.volume = "50%";
+
+                notif = () => toast.error(`Paused '${name}'`, {
+                    //Custom icon
+                    icon: "🍿", //😕 , 🍿
+            
+                    //Colors
+                    iconTheme: {
+                        primary: '#24292f',
+                        secondary: '#f9fafb',
+                        },
+            
+                        //Id
+                        id: "notif"
+                });
+            } else {
+                //window.confirm("An unknown error ocurred. Maybe try again?");
+
+                notif = () => toast.error(`An unknown error occurred!`, {
+                    //Custom icon
+                    icon: "🤔", //🤔
+            
+                    //Colors
+                    iconTheme: {
+                        primary: '#24292f',
+                        secondary: '#f9fafb',
+                        },
+            
+                        //Id
+                        id: "notif"
+                });
+            }
+
+            //Changing the State's values
+            /*this.setState({
+                playing: !this.state.playing
+            })*/
+
+            setPlaying(!playing);
+            
+            //Displaying a Toast (notification)
+            toast.remove();
+            return notif();
+        },
+        manageVolume(value) {
+            const userValueHundred = value / 100;
+            console.log(userValueHundred);
+
+            /*this.setState({
+                volume: userValue,
+            });*/
+
+            setVolume(userValueHundred);
+            audioElement.current.volume = userValueHundred;
+            inputAudio.current.value = value;
         },
     }));
 
@@ -234,6 +351,7 @@ const Button = forwardRef((props, ref) => {
             <div className="button--volume--before" ref={volumeChanger}>
                 <input
                     type="range"
+                    ref={inputAudio}
                     onInput={manageVolume}
                     onChange={manageVolume}
                 />

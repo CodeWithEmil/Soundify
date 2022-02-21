@@ -68,9 +68,42 @@ function Sounds(props) {
         let s2 = randomNum(1, 16);
         let s3 = randomNum(1, 16);
 
-        s1.current.showAlert();
-        s2.current.showAlert();
-        s3.current.showAlert();
+        s1.current.playPause();
+        s2.current.playPause();
+        s3.current.playPause();
+    };
+
+    let relaxingSounds = () => {
+        rainCompRef.current.playPause();
+        rainCompRef.current.manageVolume(60);
+
+        thunderCompRef.current.playPause();
+        thunderCompRef.current.manageVolume(20);
+
+        windCompRef.current.playPause();
+        windCompRef.current.manageVolume(40);
+    };
+
+    let productivitySounds = () => {
+        birdsCompRef.current.playPause();
+        birdsCompRef.current.manageVolume(80);
+
+        treesCompRef.current.playPause();
+        treesCompRef.current.manageVolume(20);
+
+        riverCompRef.current.playPause();
+        riverCompRef.current.manageVolume(10);
+    };
+
+    let greatnessSounds = () => {
+        keyboardCompRef.current.playPause();
+        keyboardCompRef.current.manageVolume(40);
+
+        campfireCompRef.current.playPause();
+        campfireCompRef.current.manageVolume(30);
+
+        riverCompRef.current.playPause();
+        riverCompRef.current.manageVolume(5);
     };
 
     window.addEventListener("scroll", styling);
@@ -85,13 +118,13 @@ function Sounds(props) {
         <div className="sounds--body" ref={container}>
             <div className="sounds--search">
                 <div className="filters">
-                    <button className="filters--one" ref={prod}>
+                    <button className="filters--one" ref={prod} onClick={relaxingSounds}>
                         <span>🧘🏻</span>
                     </button>
-                    <button className="filters--two" ref={relax}>
+                    <button className="filters--two" ref={relax} onClick={productivitySounds}>
                         <span>⚙️</span>
                     </button>
-                    <button className="filters--three" ref={great}>
+                    <button className="filters--three" ref={great} onClick={greatnessSounds}>
                         <span>🥇</span>
                     </button>
                 </div>
