@@ -130,13 +130,25 @@ function Sounds(props) {
         <div className="sounds--body" ref={container}>
             <div className="sounds--search">
                 <div className="filters">
-                    <button className="filters--one" ref={prod} onClick={relaxingSounds}>
+                    <button
+                        className="filters--one"
+                        ref={prod}
+                        onClick={relaxingSounds}
+                    >
                         <span>🧘🏻</span>
                     </button>
-                    <button className="filters--two" ref={relax} onClick={productivitySounds}>
+                    <button
+                        className="filters--two"
+                        ref={relax}
+                        onClick={productivitySounds}
+                    >
                         <span>⚙️</span>
                     </button>
-                    <button className="filters--three" ref={great} onClick={greatnessSounds}>
+                    <button
+                        className="filters--three"
+                        ref={great}
+                        onClick={greatnessSounds}
+                    >
                         <span>🥇</span>
                     </button>
                 </div>
@@ -155,7 +167,10 @@ function Sounds(props) {
                             name="Rain"
                             icon="fas fa-cloud-rain"
                             container={container}
-                            audio={require("./audio/rain.mp3")}
+                            audio={
+                                //require("./audio/rain.mp3")
+                                "https://freesound.org/data/previews/531/531947_7707368-lq.mp3"
+                            }
                             ref={rainCompRef}
                         />
                     </div>
@@ -165,7 +180,10 @@ function Sounds(props) {
                             name="Thunder"
                             icon="fas fa-bolt"
                             container={container}
-                            audio={require("./audio/thunder.mp3")}
+                            audio={
+                                //require("./audio/thunder.mp3")
+                                "https://freesound.org/data/previews/237/237729_3839718-lq.mp3"
+                            }
                             ref={thunderCompRef}
                         />
                     </div>
@@ -175,7 +193,10 @@ function Sounds(props) {
                             name="Snow"
                             icon="fas fa-snowflake"
                             container={container}
-                            audio={require("./audio/snow.mp3")}
+                            audio={
+                                //require("./audio/snow.mp3")
+                                "https://freesound.org/data/previews/336/336763_4040987-lq.mp3"
+                            }
                             ref={snowCompRef}
                         />
                     </div>
@@ -185,7 +206,10 @@ function Sounds(props) {
                             name="River"
                             icon="fas fa-water"
                             container={container}
-                            audio={require("./audio/river-1.mp3")}
+                            audio={
+                                //require("./audio/river-1.mp3")
+                                "https://freesound.org/data/previews/365/365920_5121236-lq.mp3"
+                            }
                             ref={riverCompRef}
                         />
                     </div>
@@ -197,7 +221,10 @@ function Sounds(props) {
                             name="Library"
                             icon="fas fa-book"
                             container={container}
-                            audio={undefined}
+                            audio={
+                                //undefined
+                                "https://e8b8e3q2.ssl.hwcdn.net/sounds/people/delft-library160.mp3"
+                            }
                             ref={libraryCompRef}
                         />
                     </div>
@@ -207,7 +234,10 @@ function Sounds(props) {
                             name="Keyboard"
                             icon="fas fa-keyboard"
                             container={container}
-                            audio={require("./audio/keyboard.mp3")}
+                            audio={
+                                //require("./audio/keyboard.mp3")
+                                "https://freesound.org/data/previews/537/537244_1920058-lq.mp3"
+                            }
                             ref={keyboardCompRef}
                         />
                     </div>
@@ -217,7 +247,10 @@ function Sounds(props) {
                             name="Café"
                             icon="fas fa-mug-hot"
                             container={container}
-                            audio={require("./audio/cafe.mp3")}
+                            audio={
+                                //require("./audio/cafe.mp3")
+                                "https://freesound.org/data/previews/564/564489_2975543-lq.mp3"
+                            }
                             ref={cafeCompRef}
                         />
                     </div>
@@ -227,7 +260,10 @@ function Sounds(props) {
                             name="Birds"
                             icon="fas fa-dove"
                             container={container}
-                            audio={require("./audio/birds.mp3")}
+                            audio={
+                                //require("./audio/birds.mp3")
+                                "https://freesound.org/data/previews/387/387978_6221013-lq.mp3"
+                            }
                             ref={birdsCompRef}
                         />
                     </div>
@@ -239,7 +275,10 @@ function Sounds(props) {
                             name="Ocean"
                             icon="fas fa-anchor"
                             container={container}
-                            audio={require("./audio/ocean.mp3")}
+                            //audio={require("./audio/ocean.mp3/")}
+                            audio={
+                                "https://e8b8e3q2.ssl.hwcdn.net/sounds/hipster/ocean.mp3"
+                            }
                             ref={oceanCompRef}
                         />
                     </div>
@@ -249,7 +288,10 @@ function Sounds(props) {
                             name="Wind"
                             icon="fas fa-wind"
                             container={container}
-                            audio={require("./audio/wind-2.mp3")}
+                            audio={
+                                //require("./audio/wind-2.mp3")
+                                "https://freesound.org/data/previews/408/408442_7155540-lq.mp3"
+                            }
                             ref={windCompRef}
                         />
                     </div>
@@ -259,7 +301,10 @@ function Sounds(props) {
                             name="Bath"
                             icon="fas fa-bath"
                             container={container}
-                            audio={require("./audio/bath.mp3")}
+                            audio={
+                                //require("./audio/bath.mp3")
+                                "https://freesound.org/data/previews/332/332280_2084653-lq.mp3"
+                            }
                             ref={bathCompRef}
                         />
                     </div>
@@ -269,7 +314,10 @@ function Sounds(props) {
                             name="Crowd"
                             icon="fas fa-users"
                             container={container}
-                            audio={require("./audio/crowd.mp3")}
+                            audio={
+                                //require("./audio/crowd.mp3")
+                                "https://freesound.org/data/previews/360/360703_3471835-lq.mp3"
+                            }
                             ref={crowdCompRef}
                         />
                     </div>
@@ -281,7 +329,10 @@ function Sounds(props) {
                             name="Campfire"
                             icon="fas fa-fire"
                             container={container}
-                            audio={require("./audio/campfire.mp3")}
+                            audio={
+                                //require("./audio/campfire.mp3")
+                                "https://freesound.org/data/previews/532/532191_9735871-lq.mp3"
+                            }
                             ref={campfireCompRef}
                         />
                     </div>
@@ -291,7 +342,10 @@ function Sounds(props) {
                             name="Ticking"
                             icon="fas fa-clock"
                             container={container}
-                            audio={require("./audio/ticking.mp3")}
+                            audio={
+                                //require("./audio/ticking.mp3")
+                                "https://freesound.org/data/previews/405/405423_7707368-lq.mp3"
+                            }
                             ref={tickingCompRef}
                         />
                     </div>
@@ -301,7 +355,10 @@ function Sounds(props) {
                             name="Radio"
                             icon="fas fa-broadcast-tower"
                             container={container}
-                            audio={require("./audio/radio-2.mp3")}
+                            audio={
+                                //require("./audio/radio-2.mp3")
+                                "https://freesound.org/data/previews/222/222599_1693722-lq.mp3"
+                            }
                             ref={radioCompRef}
                         />
                     </div>
@@ -311,7 +368,10 @@ function Sounds(props) {
                             name="Trees"
                             icon="fas fa-tree"
                             container={container}
-                            audio={require("./audio/forest.mp3")}
+                            audio={
+                                //require("./audio/forest.mp3")
+                                "https://freesound.org/data/previews/530/530415_1648170-lq.mp3"
+                            }
                             ref={treesCompRef}
                         />
                     </div>
