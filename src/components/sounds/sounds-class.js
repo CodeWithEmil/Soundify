@@ -7,8 +7,12 @@ class Sounds extends Component {
         super(props);
 
         //Creating References
-        this.container = React.createRef();
         this.body = this.props.body;
+        this.container = React.createRef();
+        this.prod = React.createRef();
+        this.relax = React.createRef();
+        this.great = React.createRef();
+        this.random = React.createRef();
             //References for Sounds
             this.rain = React.createRef(null);
         
@@ -23,19 +27,67 @@ class Sounds extends Component {
         }
 
     }
+
+    randomNum = (min, max) => {
+        let r = Math.floor(Math.random() * (max - min + 1)) + min;
+        let d = undefined;
+
+        if (r === 1)
+            d = "Rain";
+        else if (r === 2)
+            d = "Thunder";
+        else if (r === 3)
+            d = "Snow";
+        else if (r === 4)
+            d = "River";
+        else if (r === 5)
+            d = "Library";
+        else if (r === 6)
+            d = "Keyboard";
+        else if (r === 7)
+            d = "Café";
+        else if (r === 8)
+            d = "Birds";
+        else if (r === 9)
+            d = "Ocean";
+        else if (r === 10)
+            d = "Wind";
+        else if (r === 11)
+            d = "Bath";
+        else if (r === 12)
+            d = "Crowd";
+        else if (r === 13)
+            d = "Campfire";
+        else if (r === 14)
+            d = "Ticking";
+        else if (r === 15)
+            d = "Radio";
+        else if (r === 16)
+            d = "Trees";
+        else
+            d = undefined;
+
+        return d;
+    }
+
+    randomSounds = () => {
+        console.log(this.randomNum(1, 16))
+    };
+        
     
     render() {
+        
         return(
             <div className = "sounds--body" ref = { this.container }>
                 <div className = "sounds--search">
                     <div className = "filters">
-                        <button className = "filters--one"><span>🧘🏻</span></button>
-                        <button className = "filters--two"><span>⚙️</span></button>
-                        <button className = "filters--three"><span>🥇</span></button>
+                        <button className = "filters--one" ref = {this.prod}><span>🧘🏻</span></button>
+                        <button className = "filters--two" ref = {this.relax}><span>⚙️</span></button>
+                        <button className = "filters--three" ref = {this.great}><span>🥇</span></button>
                     </div>
 
                     <div className = "random">
-                        <button><i className = "fas fa-random"></i></button>
+                        <button ref = {this.random} onClick = {this.randomSounds}><i className = "fas fa-random"></i></button>
                     </div>
                 </div>
 
@@ -45,7 +97,7 @@ class Sounds extends Component {
 
                     <div className = "sounds--row">
                         <div className = "sounds--icon--container">
-                            <ButtonMemo name = "Rain" icon = "fas fa-cloud-rain" container = {this.container} audio = { require("./audio/rain.mp3") } ref = { this.rain } />
+                            <ButtonMemo name = "Rain" icon = "fas fa-cloud-rain" container = {this.container} audio = { require("./audio/rain.mp3") } />
                         </div>
 
                         <div className = "sounds--icon--container">

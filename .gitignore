@@ -10,9 +10,11 @@
 /src/components/info/useScript.js
 
 # extra
-/src/images
-/src/components/sounds/audio
+#/src/images
+/src/components/sounds/hard-audios
+/src/components/sounds/audios
 /readme1.md
+/backups
 
 # production
 /build
