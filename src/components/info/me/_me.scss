@@ -69,3 +69,10 @@
     z-index: -1;
     transition: .3s;
 }
+
+//Viewport rules
+@media screen and (max-width: 650px) {
+    .pfp--container {
+        display: none;
+    }
+}
