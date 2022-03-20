@@ -3,6 +3,9 @@ $lighterColor: #a0a0a0;
 $mainColor: #a2facf;
 $background: #010720;
 
+//Modules
+@use "./me/me";
+
 //abffc7
 //background: #010720;
 .header {

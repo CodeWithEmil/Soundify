@@ -10,6 +10,59 @@
   color: #a2facf;
 }
 
+.pfp--container {
+  z-index: 1;
+}
+.pfp--container .pfp {
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  height: 8vh;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pfp--container:hover .pfp {
+  top: 2.55vh;
+  left: 2.7vw;
+  height: 9vh;
+}
+
+.pfp--container:hover::after {
+  background: #BEF1C8;
+  height: 10vh;
+  width: 10vh;
+  top: 2.05vh;
+  left: 2.45vw;
+  z-index: -1;
+}
+
+.pfp--container::before {
+  content: "";
+  position: absolute;
+  top: 2.3vh;
+  left: 2.6vw;
+  height: 9.5vh;
+  width: 9.5vh;
+  border-radius: 50px;
+  background: #010720;
+  z-index: 0;
+}
+
+.pfp--container::after {
+  content: "";
+  position: absolute;
+  top: 3vh;
+  left: 3vw;
+  height: 0vh;
+  width: 0vh;
+  border-radius: 50px;
+  background: #ff7f50;
+  z-index: -1;
+  transition: 0.3s;
+}
+
 .header {
   height: 22vh;
   width: 100%;

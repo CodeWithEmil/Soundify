@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import MeMemo from "./me/me";
 
 class Info extends Component {
     render() {
         return(
             <div className = "header">
+<<<<<<< HEAD
+=======
+                <MeMemo />
+>>>>>>> pt
                 <a className = "follow" href="http://twitter.com/intent/tweet?url=https://soundify.net&text=Get%20a%20better%20sense%20of%20%23life%20with%20Soundify%20by%20%40CodeWithEmil&original_referer=https://soundify.net"data-text="Get a better sense of life with Soundify! Created by @CodeWithEmil" data-related="CodeWithEmil" data-lang="en" data-show-count="false" target = "_blank" rel = "noopener noreferrer">
                     <h4>#SpreadLove</h4>
                     <i className = "fab fa-twitter"></i>
