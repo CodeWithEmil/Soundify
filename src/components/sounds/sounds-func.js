@@ -382,4 +382,5 @@ function Sounds(props) {
 
 }
 
-export default Sounds;
+const SoundsMemo = React.memo(Sounds);
+export default SoundsMemo;

@@ -347,7 +347,7 @@
   position: relative;
   height: 150vh;
   width: 60%;
-  border-radius: 1.5rem 1.5rem 0 0;
+  border-radius: 1.5rem;
   background: #f9fafb;
   box-shadow: rgba(17, 12, 46, 0.15) 0 48px 100px 0;
   transition: 0.4s;
@@ -389,7 +389,7 @@
   width: 30%;
   pointer-events: all;
   cursor: pointer;
-  background: #e7e7e7;
+  background: #efefef;
   border-radius: 50px;
   border: none;
   transition: ease 0.4s;
@@ -424,7 +424,7 @@
 .sounds--body .sounds--search .random button {
   height: 4.5rem;
   width: 4.5rem;
-  background: #e7e7e7;
+  background: #efefef;
   border: none;
   border-radius: 50px;
   pointer-events: all;
@@ -524,6 +524,67 @@
     align-content: bottom;
   }
 }
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+  width: 100%;
+  color: #f9fafb;
+  background: #010720;
+}
+footer svg {
+  position: absolute;
+  bottom: -37rem;
+  z-index: -3;
+}
+footer .footerMessage {
+  margin-left: 3rem;
+  font-size: 1.2rem;
+}
+footer .footerMessage i {
+  color: #f9fafb;
+  background: none;
+  border-radius: 0.4rem;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  transition: 0.4s;
+}
+footer .footerMessage a, footer .footerMessage a:link, footer .footerMessage a:visited {
+  color: #f9fafb;
+  background: none;
+  border-radius: 0.4rem;
+  font-weight: bolder;
+  text-decoration: none;
+  padding: 0.3rem;
+  transition: 0.4s;
+}
+footer .footerMessage a:hover {
+  color: #010720;
+  background: #a2facf;
+}
+footer .footerMessage a:hover ~ i {
+  color: #010720;
+  background: #a2facf;
+}
+footer .footerIcons {
+  margin-right: 9rem;
+}
+footer .footerIcons a i, footer .footerIcons a:link i, footer .footerIcons a:visited i {
+  font-size: 1.6rem;
+  color: #f9fafb;
+  background: none;
+  border-radius: 0.4rem;
+  padding: 0.5rem;
+  margin: 0.8rem;
+  transition: 0.4s;
+}
+footer .footerIcons a:hover i {
+  color: #010720;
+  background: #a2facf;
+}
+
 * {
   margin: 0;
   padding: 0;

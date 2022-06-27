@@ -1,0 +1,91 @@
+//Palette
+$color: #f9fafb;
+$lighterColor: #a0a0a0;
+$mainColor: #a2facf;
+$background: #010720;
+
+
+//Styles
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 15vh;
+    width: 100%;
+    
+    color: $color;
+    background: $background;
+
+    svg {
+        position: absolute;
+        bottom: -37rem;
+
+        z-index: -3;
+    }
+
+    .footerMessage {
+        margin-left: 3rem;
+        font-size: 1.2rem;
+
+        i {
+            color: $color;
+            background: none;
+
+            border-radius: .4rem;
+            padding: .3rem;
+            margin: .2rem;
+
+            transition: .4s;
+        }
+
+        a, a:link, a:visited {
+            color: $color;
+            background: none;
+            border-radius: .4rem;
+
+            font-weight: bolder;
+            text-decoration: none;
+            padding: 0.3rem;
+
+            transition: .4s;
+        }
+
+        a:hover {
+            //text-decoration: underline;
+            color: $background;
+            background: $mainColor;
+        }
+
+        a:hover ~ i {
+            color: $background;
+            background: $mainColor;
+        }
+    }
+
+    .footerIcons {
+        margin-right: 9rem;
+
+        a, a:link, a:visited {
+            i {
+                font-size: 1.6rem;
+                color: $color;
+                background: none;
+            
+                border-radius: .4rem;
+                padding: .5rem;
+                margin: .8rem;
+            
+                transition: .4s;
+            }
+        }
+
+        a:hover {
+            i {
+                color: $background;
+                background: $mainColor;
+            }
+        }
+    }
+}

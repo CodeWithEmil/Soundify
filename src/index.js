@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import "./general.css";
-import Body from "./components/body/body";
+import BodyMemo from "./components/body/body";
 
 import reportWebVitals from './reportWebVitals';
 
@@ -11,7 +11,7 @@ console.log(window.outerWidth + " is outer width");
 
 ReactDOM.render(
   <React.StrictMode>
-    <Body />
+    <BodyMemo />
   </React.StrictMode>,
   document.getElementById('root')
 );

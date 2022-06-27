@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 
-import Info from "../info/info";
-import Sounds from "../sounds/sounds-func";
+import InfoMemo from "../info/info";
+import SoundsMemo from "../sounds/sounds-func";
+import FooterMemo from "../footer/footer";
 
 class Body extends Component {
     constructor() {
@@ -13,11 +14,13 @@ class Body extends Component {
     render() {
         return(
             <div className = "mainBody">
-                <Info ref = { this.body } />
-                <Sounds body = {this.body} />
+                <InfoMemo ref = { this.body } />
+                <SoundsMemo body = {this.body} />
+                <FooterMemo />
             </div>
         )
     }
 }
 
-export default Body;
+const BodyMemo = React.memo(Body);
+export default BodyMemo;
