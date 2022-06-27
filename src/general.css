@@ -537,7 +537,7 @@ footer {
 footer svg {
   position: absolute;
   bottom: -37rem;
-  z-index: -3;
+  z-index: -1;
 }
 footer .footerMessage {
   margin-left: 3rem;
@@ -583,6 +583,171 @@ footer .footerIcons a i, footer .footerIcons a:link i, footer .footerIcons a:vis
 footer .footerIcons a:hover i {
   color: #010720;
   background: #a2facf;
+}
+
+.background--container {
+  position: absolute;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  min-height: 180vh;
+  pointer-events: none;
+}
+.background--container i {
+  position: absolute;
+  font-size: 2rem;
+}
+.background--container .background--icon--one {
+  position: absolute;
+  transform: rotate(350deg);
+  top: 22rem;
+  left: 3.8rem;
+  z-index: none;
+}
+.background--container .background--icon--one .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--one .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--two {
+  position: absolute;
+  transform: rotate(270deg);
+  top: 50rem;
+  left: -0.3rem;
+  z-index: none;
+}
+.background--container .background--icon--two .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--two .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--three {
+  position: absolute;
+  transform: rotate(10deg);
+  top: 12rem;
+  left: 80rem;
+  z-index: none;
+}
+.background--container .background--icon--three .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--three .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--four {
+  position: absolute;
+  transform: rotate(340deg);
+  top: 30rem;
+  left: 69.6rem;
+  z-index: -2;
+}
+.background--container .background--icon--four .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--four .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--five {
+  position: absolute;
+  transform: rotate(20deg);
+  top: 35rem;
+  left: 16rem;
+  z-index: -2;
+}
+.background--container .background--icon--five .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--five .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--six {
+  position: absolute;
+  transform: rotate(20deg);
+  top: 65rem;
+  left: 80.8rem;
+  z-index: -1;
+}
+.background--container .background--icon--six .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--six .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--seven {
+  position: absolute;
+  transform: rotate(340deg);
+  top: 43rem;
+  left: 80rem;
+  z-index: none;
+}
+.background--container .background--icon--seven .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--seven .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
+}
+.background--container .background--icon--eight {
+  position: absolute;
+  transform: rotate(350deg);
+  top: 77rem;
+  left: 4.7rem;
+  z-index: none;
+}
+.background--container .background--icon--eight .icon--one {
+  color: #a2facf;
+  top: none;
+  left: 1.2rem;
+  z-index: none;
+}
+.background--container .background--icon--eight .icon--two {
+  color: #010720;
+  top: 0.2rem;
+  left: 1rem;
+  z-index: -1;
 }
 
 * {

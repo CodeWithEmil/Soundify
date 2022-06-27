@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import InfoMemo from "../info/info";
 import SoundsMemo from "../sounds/sounds-func";
 import FooterMemo from "../footer/footer";
+import BackgroundMemo from "../background/background";
 
 class Body extends Component {
     constructor() {
@@ -17,6 +18,7 @@ class Body extends Component {
                 <InfoMemo ref = { this.body } />
                 <SoundsMemo body = {this.body} />
                 <FooterMemo />
+                <BackgroundMemo />
             </div>
         )
     }

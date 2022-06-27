@@ -1,0 +1,134 @@
+//Palette
+$color: #f9fafb;
+$lighterColor: #a0a0a0;
+$mainColor: #a2facf;
+$background: #010720;
+
+//Mixins
+@mixin positioning($deg, $y, $x, $z) {
+    position: absolute;
+    transform: rotate($deg);
+    top: $y;
+    left: $x;
+    z-index: $z;
+}
+
+@mixin icons($col, $y, $x, $z) {
+    color: $col;
+    top: $y;
+    left: $x;
+    z-index: $z;
+}
+
+//Styles
+.background--container {
+    position: absolute;
+
+    align-self: center;
+
+    height: 100%;
+    width: 100%;
+    min-height: 180vh;
+
+    pointer-events: none;
+
+    i {
+        position: absolute;
+        font-size: 2rem;
+    }
+    
+    //Each music note's style
+    .background--icon--one {
+        @include positioning(350deg, 22rem, 3.8rem, none);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--two {
+        @include positioning(270deg, 50rem, -0.3rem, none);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--three {
+        @include positioning(10deg, 12rem, 80rem, none);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--four {
+        @include positioning(340deg, 30rem, 69.6rem, -2);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--five {
+        @include positioning(20deg, 35rem, 16rem, -2);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--six {
+        @include positioning(20deg, 65rem, 80.8rem, -1);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+    
+    .background--icon--seven {
+        @include positioning(340deg, 43rem, 80rem, none);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+
+    .background--icon--eight {
+        @include positioning(350deg, 77rem, 4.7rem, none);
+
+        .icon--one {
+            @include icons($mainColor, none, 1.2rem, none);
+        }
+
+        .icon--two {
+            @include icons($background, .2rem, 1rem, -1);
+        }
+    }
+}
